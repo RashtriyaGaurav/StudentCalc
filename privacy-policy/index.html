@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy | StudentCalc</title>
+  <meta name="description" content="StudentCalc's Privacy Policy — learn how we protect your data, use cookies for analytics, and keep your calculations completely private. No personal data is stored." />
+  <link rel="canonical" href="https://www.studentcalc.online/privacy-policy/" />
+    <link rel="shortcut icon" href="/images/logo.png" type="image/x-icon">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Privacy Policy | StudentCalc",
+    "description": "Privacy Policy explaining data protection practices for StudentCalc — free academic tools for students.",
+    "url": "https://studentcalc.online/privacy-policy/",
+    "publisher": {
+      "@type": "Organization",
+      "name": "StudentCalc",
+      "url": "https://studentcalc.online"
+    }
+  }
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+    body { font-family: 'Space Grotesk'; }
+  </style>
+</head>
+
+<body class="bg-white">
+
+  <!-- Header -->
+    <header class="bg-[#FEFEFF] fixed w-full z-50 border-b border-zinc-100">
+        <nav class="flex justify-between items-center max-w-7xl mx-auto px-4 sm:px-6 py-2">
+            <a href="/" class="text-xl sm:text-2xl font-bold tracking-tight">
+                <span class="text-zinc-900">Student</span><span class="text-zinc-900">Calc</span>
+            </a>
+
+            <div class="flex items-center gap-2 sm:gap-8">
+                <a href="/about/"
+                    class="text-sm font-medium hover:scale-105 transition-transform py-2 px-1 hidden sm:block">About</a>
+                <a href="/blog/"
+                    class="text-sm font-medium hover:scale-105 transition-transform py-2 px-1 hidden sm:block">Blog</a>
+                <a href="/materials/"
+                    class="text-sm font-medium hover:scale-105 transition-transform py-2 px-1 hidden sm:block">Materials</a>
+                <a href="/contact/"
+                    class="text-sm font-medium hover:scale-105 transition-transform py-2 px-1 hidden sm:block">Contact</a>
+                <!-- Header Support Button -->
+                <a href="https://rashtriya.gumroad.com/coffee" target="_blank"
+                    class="hidden md:flex items-center gap-2 bg-black text-white px-3 py-2 rounded-full font-semibold hover:bg-gray-900 hover:scale-105 transition-all duration-300">
+
+                    ☕ Support Us
+                </a>
+
+                <!-- Hamburger (mobile only) -->
+                <button id="menuBtn" class="sm:hidden p-2 rounded-lg border border-zinc-200 hover:bg-zinc-50 transition"
+                    aria-label="Open menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor" stroke-width="1.5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Overlay -->
+    <div id="overlay" class="fixed inset-0 bg-black/35 z-[200] hidden opacity-0 transition-opacity duration-250"></div>
+
+    <!-- Sidebar -->
+    <aside id="sidebar"
+        class="fixed top-0 right-0 h-full w-60 bg-white z-[201] border-l border-zinc-100 flex flex-col p-5 translate-x-full transition-transform duration-300 ease-in-out"
+        role="dialog" aria-modal="true" aria-label="Navigation menu">
+        <div class="flex justify-between items-center mb-8">
+            <a href="/" class="text-lg font-bold tracking-tight text-zinc-900">StudentCalc</a>
+            <button id="closeBtn" class="p-1.5 rounded-lg border border-zinc-200 hover:bg-zinc-50 transition"
+                aria-label="Close menu">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor" stroke-width="1.5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+        <nav class="flex flex-col gap-1 flex-1">
+            <a href="/about/"
+                class="text-sm font-medium px-3 py-3 rounded-lg hover:bg-zinc-50 transition-colors">About</a>
+            <a href="/blog/"
+                class="text-sm font-medium px-3 py-3 rounded-lg hover:bg-zinc-50 transition-colors">Blog</a>
+            <a href="/materials/"
+                class="text-sm font-medium px-3 py-3 rounded-lg hover:bg-zinc-50 transition-colors">Materials</a>
+            <a href="/contact/" class="text-sm font-medium px-3 py-3 rounded-lg hover:bg-zinc-50 transition-colors">
+                Contact
+            </a>
+        </nav>
+        <a href="https://rashtriya.gumroad.com/coffee"
+            class="mt-auto text-sm font-medium text-center bg-black text-white py-2.5 px-5 rounded-full hover:opacity-80 transition-opacity">
+            ☕ Support Us
+
+        </a>
+    </aside>
+
+    <script>
+        const menuBtn = document.getElementById('menuBtn');
+        const closeBtn = document.getElementById('closeBtn');
+        const sidebar = document.getElementById('sidebar');
+        const overlay = document.getElementById('overlay');
+
+        function openMenu() {
+            sidebar.classList.remove('translate-x-full');
+            overlay.classList.remove('hidden');
+            requestAnimationFrame(() => overlay.classList.remove('opacity-0'));
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeMenu() {
+            sidebar.classList.add('translate-x-full');
+            overlay.classList.add('opacity-0');
+            setTimeout(() => overlay.classList.add('hidden'), 250);
+            document.body.style.overflow = '';
+        }
+
+        menuBtn.addEventListener('click', openMenu);
+        closeBtn.addEventListener('click', closeMenu);
+        overlay.addEventListener('click', closeMenu);
+        document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMenu(); });
+    </script>
+
+  <main class="mx-auto min-h-[100vh] max-w-5xl px-4 sm:px-6 pt-32 pb-20">
+
+    <!-- Hero -->
+    <div class="text-center mb-14">
+      <span class="px-4 py-1 border border-teal-400 bg-teal-100/50 rounded-full text-sm text-teal-700">Legal</span>
+      <h1 class="text-4xl sm:text-6xl font-semibold mt-5 tracking-tight">Privacy Policy</h1>
+      <p class="text-zinc-500 mt-4 text-lg max-w-xl mx-auto leading-relaxed">Your privacy matters. Here's exactly how we handle your data — no surprises.</p>
+      <p class="text-zinc-400 text-sm mt-3">Last updated: 26 May, 2026</p>
+    </div>
+
+    <!-- Quick trust badges -->
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-10">
+      <div class="border-2 border-zinc-200 rounded-xl p-4 text-center">
+        <div class="text-2xl mb-1">🔒</div>
+        <p class="text-xs font-medium text-zinc-700">No data stored</p>
+      </div>
+      <div class="border-2 border-zinc-200 rounded-xl p-4 text-center">
+        <div class="text-2xl mb-1">🧮</div>
+        <p class="text-xs font-medium text-zinc-700">Local calculations</p>
+      </div>
+      <div class="border-2 border-zinc-200 rounded-xl p-4 text-center">
+        <div class="text-2xl mb-1">🚫</div>
+        <p class="text-xs font-medium text-zinc-700">No sign-up needed</p>
+      </div>
+      <div class="border-2 border-zinc-200 rounded-xl p-4 text-center">
+        <div class="text-2xl mb-1">✅</div>
+        <p class="text-xs font-medium text-zinc-700">GDPR & CCPA ready</p>
+      </div>
+    </div>
+
+    <!-- Sections -->
+    <div class="space-y-4">
+
+      <section class="border-2 border-zinc-200 rounded-xl p-6 sm:p-8">
+        <h2 class="text-xl font-semibold text-zinc-900 mb-3">Our commitment to your privacy</h2>
+        <p class="text-zinc-600 leading-relaxed">At <strong>StudentCalc.online</strong>, accessible at <a href="https://studentcalc.online/" class="text-zinc-900 underline underline-offset-2 hover:opacity-60 transition-opacity">https://studentcalc.online</a>, we are committed to protecting your privacy. This policy explains what information we collect, how we use it, and your rights regarding your data. We built StudentCalc to be genuinely useful to students — not to harvest data.</p>
+      </section>
+
+      <section class="border-2 border-zinc-200 rounded-xl p-6 sm:p-8">
+        <h2 class="text-xl font-semibold text-zinc-900 mb-3">Information we collect</h2>
+        <p class="text-zinc-600 leading-relaxed mb-4">StudentCalc does not collect any personal information unless you voluntarily provide it. This may include:</p>
+        <ul class="space-y-2 text-zinc-600">
+          <li class="flex items-start gap-2"><span class="text-zinc-400 mt-0.5">→</span>Your name and email address, only if you contact us via our contact form.</li>
+          <li class="flex items-start gap-2"><span class="text-zinc-400 mt-0.5">→</span>Log data such as IP address, browser type, pages visited, and time spent on pages — collected automatically.</li>
+          <li class="flex items-start gap-2"><span class="text-zinc-400 mt-0.5">→</span>Anonymous usage statistics via Google Analytics (page visits, device info, interaction data).</li>
+        </ul>
+        <div class="mt-5 bg-teal-50 border border-teal-200 rounded-lg px-4 py-3">
+          <p class="text-sm text-teal-800 font-medium">🧮 All calculations happen entirely in your browser. We never see or store your calculation inputs or results.</p>
+        </div>
+      </section>
+
+      <section class="border-2 border-zinc-200 rounded-xl p-6 sm:p-8">
+        <h2 class="text-xl font-semibold text-zinc-900 mb-3">How we use your information</h2>
+        <p class="text-zinc-600 leading-relaxed mb-4">We use the collected information only for:</p>
+        <ul class="space-y-2 text-zinc-600">
+          <li class="flex items-start gap-2"><span class="text-zinc-400 mt-0.5">→</span>Operating and maintaining StudentCalc.online.</li>
+          <li class="flex items-start gap-2"><span class="text-zinc-400 mt-0.5">→</span>Improving user experience and website performance.</li>
+          <li class="flex items-start gap-2"><span class="text-zinc-400 mt-0.5">→</span>Responding to user inquiries and support requests.</li>
+          <li class="flex items-start gap-2"><span class="text-zinc-400 mt-0.5">→</span>Analyzing usage trends and preventing fraudulent activity.</li>
+        </ul>
+      </section>
+
+      <section class="border-2 border-zinc-200 rounded-xl p-6 sm:p-8">
+        <h2 class="text-xl font-semibold text-zinc-900 mb-3">Cookies & Google advertising cookies</h2>
+        <p class="text-zinc-600 leading-relaxed">StudentCalc uses cookies to enhance user experience. Cookies are small files stored on your device that help improve website functionality.</p>
+        <p class="text-zinc-600 leading-relaxed mt-3">StudentCalc uses Google AdSense to display advertising, and Google Analytics to understand how visitors use the site. Google, as a third-party vendor, uses cookies (including cookies used by Google Analytics and Google Ads) to serve ads based on a user's prior visits to this website or other websites, and to measure how our site is used. Google's use of advertising cookies enables it and its partners to serve ads based on your visits to this site and/or other sites on the internet. You may opt out of personalised advertising by visiting Google's Ads Settings, and you can learn more about how Google uses data in the link below.</p>
+        <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener" class="inline-flex items-center gap-1 mt-3 text-sm font-medium text-zinc-900 underline underline-offset-2 hover:opacity-60 transition-opacity">
+          Google Ads Privacy Policy →
+        </a>
+      </section>
+
+      <section class="border-2 border-zinc-200 rounded-xl p-6 sm:p-8">
+        <h2 class="text-xl font-semibold text-zinc-900 mb-3">Advertising partners</h2>
+        <p class="text-zinc-600 leading-relaxed">Our advertising partners may use technologies such as cookies, JavaScript, or web beacons in advertisements and links that appear on StudentCalc. These technologies are used to measure advertising effectiveness and personalise ad content. StudentCalc has no control over cookies used by third-party advertisers.</p>
+      </section>
+
+      <section class="border-2 border-zinc-200 rounded-xl p-6 sm:p-8">
+        <h2 class="text-xl font-semibold text-zinc-900 mb-3">Third-party privacy policies</h2>
+        <p class="text-zinc-600 leading-relaxed">This Privacy Policy does not apply to other advertisers or websites. We advise you to consult the respective Privacy Policies of third-party ad servers or websites for detailed information about their practices and how to opt out.</p>
+      </section>
+
+      <section class="border-2 border-zinc-200 rounded-xl p-6 sm:p-8">
+        <h2 class="text-xl font-semibold text-zinc-900 mb-3">Your data protection rights (GDPR & CCPA)</h2>
+        <p class="text-zinc-600 leading-relaxed mb-4">You have the right to:</p>
+        <ul class="space-y-2 text-zinc-600">
+          <li class="flex items-start gap-2"><span class="text-zinc-400 mt-0.5">→</span>Request access to the personal data we hold about you.</li>
+          <li class="flex items-start gap-2"><span class="text-zinc-400 mt-0.5">→</span>Request correction of inaccurate or incomplete information.</li>
+          <li class="flex items-start gap-2"><span class="text-zinc-400 mt-0.5">→</span>Request deletion of your personal data under certain conditions.</li>
+          <li class="flex items-start gap-2"><span class="text-zinc-400 mt-0.5">→</span>Restrict or object to the processing of your data.</li>
+          <li class="flex items-start gap-2"><span class="text-zinc-400 mt-0.5">→</span>Request transfer of your data to another organisation.</li>
+        </ul>
+        <p class="text-zinc-600 mt-4">If you make a request, we will respond within 7 days.</p>
+      </section>
+
+      <section class="border-2 border-zinc-200 rounded-xl p-6 sm:p-8">
+        <h2 class="text-xl font-semibold text-zinc-900 mb-3">Children's information (COPPA)</h2>
+        <p class="text-zinc-600 leading-relaxed">StudentCalc does not knowingly collect any personal information from children under the age of 13. If you believe your child has provided personal information on our website, please contact us immediately and we will take steps to remove such data.</p>
+      </section>
+
+      <!-- FAQ -->
+      <section class="border-2 border-zinc-200 rounded-xl p-6 sm:p-8">
+        <h2 class="text-xl font-semibold text-zinc-900 mb-6">Frequently asked questions</h2>
+        <div class="space-y-6">
+          <div>
+            <h3 class="text-base font-semibold text-zinc-900 mb-1">Does StudentCalc use cookies?</h3>
+            <p class="text-zinc-600 text-sm leading-relaxed">Yes, we use essential session cookies for website functionality, and Google Analytics cookies for anonymous usage statistics.</p>
+          </div>
+          <div class="border-t border-zinc-100 pt-6">
+            <h3 class="text-base font-semibold text-zinc-900 mb-1">Is my calculation data stored?</h3>
+            <p class="text-zinc-600 text-sm leading-relaxed">No. All calculations are performed locally in your browser. We never see or store your inputs or results.</p>
+          </div>
+          <div class="border-t border-zinc-100 pt-6">
+            <h3 class="text-base font-semibold text-zinc-900 mb-1">How do I delete my contact information?</h3>
+            <p class="text-zinc-600 text-sm leading-relaxed">Contact us through our <a href="/contact/" class="text-zinc-900 underline underline-offset-2 hover:opacity-60 transition-opacity">contact form</a> and we'll permanently delete your information within 48 hours.</p>
+          </div>
+          <div class="border-t border-zinc-100 pt-6">
+            <h3 class="text-base font-semibold text-zinc-900 mb-1">Who do I contact about privacy concerns?</h3>
+            <p class="text-zinc-600 text-sm leading-relaxed">Reach us anytime through our <a href="/contact/" class="text-zinc-900 underline underline-offset-2 hover:opacity-60 transition-opacity">Contact page</a>. We take all privacy concerns seriously.</p>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-black w-full overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 pt-10">
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-8 mb-10">
+        <div class="col-span-2 sm:col-span-1">
+          <div class="text-xl font-bold text-white mb-3">StudentCalc</div>
+          <p class="text-sm leading-relaxed text-zinc-300">Free academic tools built for students, by students.</p>
+        </div>
+        <div>
+          <div class="text-lg font-semibold text-white mb-3">Tools</div>
+          <ul class="space-y-2 text-sm">
+            <li><a href="/75-percent-attendance-calculator/" class="hover:text-white transition-colors text-zinc-300">75% Attendance Calculator</a></li>
+            <li><a href="/marks-percentage-calculator/" class="hover:text-white transition-colors text-zinc-300">Marks Percentage Calculator</a></li>
+                        <li><a href="/cgpa-to-percentage-calculator/" class="hover:text-white transition-colors text-zinc-300">CGPA to Percentage Calculator</a></li>
+                        <li><a href="/age-calculator/" class="hover:text-white transition-colors text-zinc-300">Age Calculator</a></li>
+                        <li><a href="/easy-grade-calculator/" class="hover:text-white transition-colors text-zinc-300">Easy Grade Calculator</a></li>
+                        <li><a href="/percentile-predictor/" class="hover:text-white transition-colors text-zinc-300">JEE Percentile Predictor</a></li>
+                        <li><a href="/pomodoro-timer/" class="hover:text-white transition-colors text-zinc-300">Pomodoro Timer</a></li>
+                        <li><a href="/word-counter-online/" class="hover:text-white transition-colors text-zinc-300">Word Counter Online</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="text-lg font-semibold text-white mb-3">Quick Links</div>
+          <ul class="space-y-2 text-sm">
+            <li><a href="/about/" class="hover:text-white transition-colors text-zinc-300">About</a></li>
+            <li><a href="/blog/" class="hover:text-white transition-colors text-zinc-300">Blog</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="text-lg font-semibold text-white mb-3">Company</div>
+          <ul class="space-y-2 text-sm">
+            <li><a href="/contact/" class="hover:text-white transition-colors text-zinc-300">Contact</a></li>
+            <li><a href="/privacy-policy/" class="hover:text-white transition-colors text-zinc-300">Privacy Policy</a></li>
+            <li><a href="/terms-of-use/" class="hover:text-white transition-colors text-zinc-300">Terms of Use</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-zinc-800 pt-6 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-zinc-300">
+        <span>© 2026 <span class="text-white">StudentCalc</span>. All rights reserved.</span>
+        <span>Made with ❤️ in Earth</span>
+      </div>
+    </div>
+    <div class="relative leading-none">
+      <svg viewBox="0 0 1600 300" class="w-full h-auto block">
+        <text x="50%" y="60%" text-anchor="middle" dominant-baseline="middle" fill="white" font-size="230" font-weight="900" letter-spacing="-6" font-family="Arial, sans-serif">StudentCalc</text>
+      </svg>
+    </div>
+  </footer>
+
+</body>
+</html>

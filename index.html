@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudentCalc.online - Free Study Tools & Student Calculators</title>
+    <meta name="description"
+        content="StudentCalc.online provides free study tools and student calculators like percentage calculator, CGPA to percentage, GPA calculator, attendance calculator and more. Simple, fast, and accurate." />
+    <meta name="keywords"
+        content="student tools, study tools, percentage calculator, cgpa to percentage, gpa calculator, attendance calculator, student calculators online" />
+    <link rel="canonical" href="https://www.studentcalc.online/" />
+    <link rel="shortcut icon" href="/images/logo.png" type="image/x-icon">
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+
+        body {
+            font-family: 'Space Grotesk';
+        }
+    </style>
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+
+    {
+      "@type": "Organization",
+      "@id": "https://www.studentcalc.online/#organization",
+      "name": "StudentCalc",
+      "url": "https://www.studentcalc.online/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.studentcalc.online/android-chrome-192x192.png"
+      }
+    },
+
+    {
+      "@type": "WebSite",
+      "@id": "https://www.studentcalc.online/#website",
+      "url": "https://www.studentcalc.online/",
+      "name": "StudentCalc.online",
+      "description": "Free study tools and student calculators for academic productivity.",
+      "publisher": {
+        "@id": "https://www.studentcalc.online/#organization"
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://www.studentcalc.online/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    },
+
+    {
+      "@type": "WebPage",
+      "@id": "https://www.studentcalc.online/#webpage",
+      "url": "https://www.studentcalc.online/",
+      "name": "StudentCalc.online - Free Study Tools & Student Calculators",
+      "isPartOf": {
+        "@id": "https://www.studentcalc.online/#website"
+      },
+      "about": {
+        "@id": "https://www.studentcalc.online/#organization"
+      },
+      "description": "StudentCalc.online provides free study tools and student calculators like percentage calculator, CGPA to percentage, GPA calculator, attendance calculator and more.",
+      "breadcrumb": {
+        "@id": "https://www.studentcalc.online/#breadcrumb"
+      },
+      "inLanguage": "en-US"
+    },
+
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.studentcalc.online/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.studentcalc.online/"
+        }
+      ]
+    },
+
+    {
+      "@type": "ItemList",
+      "name": "Student Tools",
+      "itemListElement": [
+
+        {
+          "@type": "SoftwareApplication",
+          "position": 1,
+          "name": "Pomodoro Timer",
+          "applicationCategory": "EducationalApplication",
+          "operatingSystem": "Any",
+          "url": "https://www.studentcalc.online/pomodoro-timer/",
+          "description": "Free online Pomodoro timer for productivity and focused study sessions.",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+          }
+        },
+
+        {
+          "@type": "SoftwareApplication",
+          "position": 2,
+          "name": "Marks Percentage Calculator",
+          "applicationCategory": "EducationalApplication",
+          "operatingSystem": "Any",
+          "url": "https://www.studentcalc.online/marks-percentage-calculator/",
+          "description": "Calculate marks percentage instantly using obtained and total marks.",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+          }
+        },
+
+        {
+          "@type": "SoftwareApplication",
+          "position": 3,
+          "name": "75% Attendance Calculator",
+          "applicationCategory": "EducationalApplication",
+          "operatingSystem": "Any",
+          "url": "https://www.studentcalc.online/75-percent-attendance-calculator/",
+          "description": "Track attendance percentage and calculate required attendance.",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+          }
+        },
+
+        {
+          "@type": "SoftwareApplication",
+          "position": 4,
+          "name": "Age Calculator",
+          "applicationCategory": "UtilityApplication",
+          "operatingSystem": "Any",
+          "url": "https://www.studentcalc.online/age-calculator/",
+          "description": "Calculate exact age in years, months, and days instantly.",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+          }
+        },
+
+        {
+          "@type": "SoftwareApplication",
+          "position": 5,
+          "name": "CGPA to Percentage Calculator",
+          "applicationCategory": "EducationalApplication",
+          "operatingSystem": "Any",
+          "url": "https://www.studentcalc.online/cgpa-to-percentage-calculator/",
+          "description": "Convert CGPA into percentage instantly with accurate calculations.",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+          }
+        }
+
+      ]
+    }
+
+  ]
+}
+</script>
+
+</head>
+
+<body class="">
+
+    <!-- Header -->
+    <header class="bg-[#FEFEFF] fixed w-full z-50 border-b border-zinc-100">
+        <nav class="flex justify-between items-center max-w-7xl mx-auto px-4 sm:px-6 py-2">
+            <a href="/" class="text-xl sm:text-2xl font-bold tracking-tight">
+                <span class="text-zinc-900">Student</span><span class="text-zinc-900">Calc</span>
+            </a>
+
+            <div class="flex items-center gap-2 sm:gap-8">
+                <a href="/about/"
+                    class="text-sm font-medium hover:scale-105 transition-transform py-2 px-1 hidden sm:block">About</a>
+                <a href="/blog/"
+                    class="text-sm font-medium hover:scale-105 transition-transform py-2 px-1 hidden sm:block">Blog</a>
+                <a href="/materials/"
+                    class="text-sm font-medium hover:scale-105 transition-transform py-2 px-1 hidden sm:block">Materials</a>
+                <a href="/contact/"
+                    class="text-sm font-medium hover:scale-105 transition-transform py-2 px-1 hidden sm:block">Contact</a>
+                <!-- Header Support Button -->
+                <a href="https://rashtriya.gumroad.com/coffee" target="_blank" title="Support me by donating some money so that i can afford coffee."
+                    class="hidden md:flex items-center gap-2 bg-black text-white px-3 py-2 rounded-full font-semibold hover:bg-gray-900 hover:scale-105 transition-all duration-300">
+
+                    ☕ Support Us
+                </a>
+
+                <!-- Hamburger (mobile only) -->
+                <button id="menuBtn" class="sm:hidden p-2 rounded-lg border border-zinc-200 hover:bg-zinc-50 transition"
+                    aria-label="Open menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor" stroke-width="1.5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Overlay -->
+    <div id="overlay" class="fixed inset-0 bg-black/35 z-[200] hidden opacity-0 transition-opacity duration-250"></div>
+
+    <!-- Sidebar -->
+    <aside id="sidebar"
+        class="fixed top-0 right-0 h-full w-60 bg-white z-[201] border-l border-zinc-100 flex flex-col p-5 translate-x-full transition-transform duration-300 ease-in-out"
+        role="dialog" aria-modal="true" aria-label="Navigation menu">
+        <div class="flex justify-between items-center mb-8">
+            <a href="/" class="text-lg font-bold tracking-tight text-zinc-900">StudentCalc</a>
+            <button id="closeBtn" class="p-1.5 rounded-lg border border-zinc-200 hover:bg-zinc-50 transition"
+                aria-label="Close menu">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor" stroke-width="1.5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+        <nav class="flex flex-col gap-1 flex-1">
+            <a href="/about/"
+                class="text-sm font-medium px-3 py-3 rounded-lg hover:bg-zinc-50 transition-colors">About</a>
+            <a href="/blog/"
+                class="text-sm font-medium px-3 py-3 rounded-lg hover:bg-zinc-50 transition-colors">Blog</a>
+            <a href="/materials/"
+                class="text-sm font-medium px-3 py-3 rounded-lg hover:bg-zinc-50 transition-colors">Materials</a>
+            <a href="/contact/" class="text-sm font-medium px-3 py-3 rounded-lg hover:bg-zinc-50 transition-colors">
+                Contact
+            </a>
+        </nav>
+        <a href="https://rashtriya.gumroad.com/coffee"
+            class="mt-auto text-sm font-medium text-center bg-black text-white py-2.5 px-5 rounded-full hover:opacity-80 transition-opacity">
+            ☕ Support Us
+
+        </a>
+    </aside>
+
+    <script>
+        const menuBtn = document.getElementById('menuBtn');
+        const closeBtn = document.getElementById('closeBtn');
+        const sidebar = document.getElementById('sidebar');
+        const overlay = document.getElementById('overlay');
+
+        function openMenu() {
+            sidebar.classList.remove('translate-x-full');
+            overlay.classList.remove('hidden');
+            requestAnimationFrame(() => overlay.classList.remove('opacity-0'));
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeMenu() {
+            sidebar.classList.add('translate-x-full');
+            overlay.classList.add('opacity-0');
+            setTimeout(() => overlay.classList.add('hidden'), 250);
+            document.body.style.overflow = '';
+        }
+
+        menuBtn.addEventListener('click', openMenu);
+        closeBtn.addEventListener('click', closeMenu);
+        overlay.addEventListener('click', closeMenu);
+        document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMenu(); });
+    </script>
+
+    <main class="mx-auto">
+
+        <div class="bg-gradient-to-t from-transparent via-teal-300/20 to-transparent py-28">
+            <div class="w-ful">
+                <div class="flex flex-col items-center text-center">
+                    <span
+                        class="px-4 sm:py-1 border border-teal-400 bg-teal-100/50 rounded-full sm:text-md text-teal-700">Free
+                        Online Tools</span>
+                    <h1 class="sm:text-7xl text-3xl font-semibold pt-5"> Smart Study Tools <br />
+                        For Modern Students</h1>
+                    <p class="py-7 sm:max-w-3xl max-w-md mx-4 sm:text-xl text-zinc-600">Simple, fast, and reliable
+                        academic calculators
+                        designed for everyday student needs. Calculate percentages, convert CGPA, track attendance, and
+                        stay productive.</p>
+
+                    <div class="flex sm:gap-10 gap-5 items-center">
+                        <a href="#tools"
+                            class="sm:py-3 sm:px-7 py-1 px-4 rounded-full bg-black text-white sm:text-lg border border-zinc-900 hover:scale-103 transition duration-200">Explore
+                            Tools</a>
+                        <a href="/blog/"
+                            class="sm:py-3 sm:px-7 py-1 px-4 rounded-full sm:text-lg border border-zinc-400 hover:scale-103 transition duration-200">Student
+                            Guides</a>
+                    </div>
+
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-10 mt-10 text-center">
+
+                        <div>
+                            <h3 class="sm:text-5xl sm:text-3xl text-2xl font-bold">25+</h3>
+                            <p class="text-zinc-600 mt-2">Study Tools</p>
+                        </div>
+
+                        <div>
+                            <h3 class="sm:text-5xl sm:text-3xl text-2xl font-bold">30K+</h3>
+                            <p class="text-zinc-600 mt-2">Students</p>
+                        </div>
+
+                        <div>
+                            <h3 class="sm:text-5xl sm:text-3xl text-2xl font-bold">24/7</h3>
+                            <p class="text-zinc-600 mt-2">Access</p>
+                        </div>
+
+                        <div>
+                            <h3 class="sm:text-5xl sm:text-3xl text-2xl font-bold">99%</h3>
+                            <p class="text-zinc-600 mt-2">Accuracy</p>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <section id="tools" class="fade-section py-20 max-w-7xl mx-auto px-4 sm:px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl sm:text-5xl font-bold mb-4">Everything You Need</h2>
+                <p class="text-zinc-500 max-w-xl mx-auto">Pick any tool and get instant results - no nonsense.</p>
+            </div>
+
+            <!-- Tools Cards -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+
+                <a href="/pomodoro-timer/"
+                    class=" flex p-4 gap-4 border-2 border-zinc-200 rounded-xl hover:scale-103 transition duration-200">
+                    <div
+                        class="h-10 w-10 rounded-xl bg-red-100 text-red-700 text-3xl shrink-0 flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                        </svg>
+
+                    </div>
+                    <div class="">
+                        <div class="text-lg font-medium">Pomodoro Timer</div>
+                        <p class="text-zinc-700 mb-2">Beat procrastination. Stay focused. Maintain a healthy break
+                            rhythm.</p>
+                        <span class="bg-red-100 px-2 rounded-full text-sm text-red-700">PRODUCTIVITY</span>
+                    </div>
+                </a>
+
+                <a href="/marks-percentage-calculator/"
+                    class=" flex p-4 gap-4 border-2 border-zinc-200 rounded-xl hover:scale-103 transition duration-200">
+                    <div
+                        class="h-10 w-10 rounded-xl bg-teal-100 shrink-0 text-3xl  flex items-center justify-center text-teal-700">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5" />
+                        </svg>
+                    </div>
+                    <div class="">
+                        <div class="text-lg font-medium">Marks Percentage Calculator</div>
+                        <p class="text-zinc-700 mb-2">Enter obtained marks and total marks and get your percentage.</p>
+                        <span class="bg-teal-100 px-2 rounded-full text-sm text-teal-700">MATHS</span>
+                    </div>
+                </a>
+
+                <a href="/75-percent-attendance-calculator/"
+                    class=" flex p-4 gap-4 border-2 border-zinc-200 rounded-xl hover:scale-103 transition duration-200">
+                    <div
+                        class="h-10 w-10 rounded-xl bg-blue-100 shrink-0 text-3xl  flex items-center justify-center text-blue-700">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z" />
+                        </svg>
+                    </div>
+                    <div class="">
+                        <div class="text-lg font-medium">75% Attendance Calculator</div>
+                        <p class="text-zinc-700 mb-2">Enter classes attend and total classes held to get percentage.</p>
+                        <span class="bg-blue-100 px-2 rounded-full text-sm text-blue-700">ACADEMIC</span>
+                    </div>
+                </a>
+
+                <a href="/age-calculator/"
+                    class=" flex p-4 gap-4 border-2 border-zinc-200 rounded-xl hover:scale-103 transition duration-200">
+                    <div
+                        class="h-10 w-10 rounded-xl shrink-0 text-3xl  flex items-center justify-center bg-purple-100 text-purple-700">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5" />
+                        </svg>
+
+                    </div>
+                    <div class="">
+                        <div class="text-lg font-medium">Age Calculator</div>
+                        <p class="text-zinc-700 mb-2">Enter your date of birth and get you age in years, months, days.
+                        </p>
+                        <span class="bg-purple-100 text-purple-700 px-2 rounded-full text-sm">ACADEMIC</span>
+                    </div>
+                </a>
+
+                <a href="/cgpa-to-percentage-calculator/"
+                    class=" flex p-4 gap-4 border-2 border-zinc-200 rounded-xl hover:scale-103 transition duration-200">
+                    <div
+                        class="h-10 w-10 rounded-xl bg-green-100 shrink-0 text-2xl  flex items-center justify-center text-green-700">
+                        %</div>
+                    <div class="">
+                        <div class="text-lg font-medium">CGPA to Percentage</div>
+                        <p class="text-zinc-700 mb-2">Enter your CGPA and convert it to percentage.</p>
+                        <span class="bg-green-100 px-2 rounded-full text-sm text-green-700">ACADEMIC</span>
+                    </div>
+                </a>
+            </div>
+
+        </section>
+
+        <section class="fade-section py-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 text-center">
+                <h2 class="text-4xl sm:text-5xl font-bold mb-16">Three Steps to Clarity</h2>
+                <div class="grid grid-cols-1 lg:grid-cols-3 sm:grid-cols-2 gap-5   ">
+                    <div class="flex flex-col items-center border-2 border-zinc-200 p-4 rounded-xl">
+                        <div
+                            class="w-14 h-14 rounded-full bg-pink-100 flex items-center justify-center text-2xl font-bold mb-5 text-pink-700">
+                            1</div>
+                        <h3 class="text-xl font-semibold mb-2">Pick a Tool</h3>
+                        <p class="text-zinc-400 text-sm leading-relaxed">Browse or search from 20+ free academic and
+                            finance tools built for students.</p>
+                    </div>
+                    <div class="flex flex-col items-center border-2 border-zinc-200 p-4 rounded-xl">
+                        <div
+                            class="w-14 h-14 rounded-full bg-green-100 flex items-center justify-center text-2xl font-bold mb-5 text-green-700">
+                            2</div>
+                        <h3 class="text-xl font-semibold mb-2">Enter Your Values</h3>
+                        <p class="text-zinc-400 text-sm leading-relaxed">Fill in your numbers — no account, no captcha,
+                            no waiting. Instant results.</p>
+                    </div>
+                    <div class="flex flex-col items-center border-2 border-zinc-200 p-4 rounded-xl">
+                        <div
+                            class="w-14 h-14 rounded-full bg-red-100 flex items-center justify-center text-2xl font-bold mb-5 text-red-700">
+                            3</div>
+                        <h3 class="text-xl font-semibold mb-2">Get Answers</h3>
+                        <p class="text-zinc-400 text-sm leading-relaxed">Clear results with explanations so you actually
+                            understand what the numbers mean.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="fade-section py-20 max-w-7xl mx-auto px-4 sm:px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl sm:text-5xl font-bold">Loved by Students</h2>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                <div class="bg-white border-2 border-zinc-200 rounded-2xl p-6">
+                    <div class="text-yellow-400 text-sm mb-3">★★★★★</div>
+                    <p class="text-zinc-600 text-sm leading-relaxed mb-4">"The attendance tracker literally saved my
+                        semester. I had no idea I was this close to the 75% cutoff."</p>
+                    <div class="flex items-center gap-3">
+                        <div
+                            class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center text-xs font-bold text-blue-700">
+                            RS</div>
+                        <div>
+                            <div class="text-sm font-semibold">Riya S.</div>
+                            <div class="text-xs text-zinc-400">Engineering, 3rd Year</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white border-2 border-zinc-200 rounded-2xl p-6">
+                    <div class="text-yellow-400 text-sm mb-3">★★★★★</div>
+                    <p class="text-zinc-600 text-sm leading-relaxed mb-4">"Used the CGPA converter for my US university
+                        application. Super accurate and so much easier than spreadsheets."</p>
+                    <div class="flex items-center gap-3">
+                        <div
+                            class="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center text-xs font-bold text-green-700">
+                            RP</div>
+                        <div>
+                            <div class="text-sm font-semibold">Robert Pat</div>
+                            <div class="text-xs text-zinc-400">MBA Student</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white border-2 border-zinc-200 rounded-2xl p-6">
+                    <div class="text-yellow-400 text-sm mb-3">★★★★★</div>
+                    <p class="text-zinc-600 text-sm leading-relaxed mb-4">"The final grade calculator helped me figure
+                        out exactly how hard I need to study for my finals. Game changer."</p>
+                    <div class="flex items-center gap-3">
+                        <div
+                            class="w-8 h-8 rounded-full bg-purple-100 flex items-center justify-center text-xs font-bold text-purple-700">
+                            RG</div>
+                        <div>
+                            <div class="text-sm font-semibold">Rashtriya Gaurav</div>
+                            <div class="text-xs text-zinc-400">B.Tech, 1st Year</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Support Section -->
+        <section class="w-full py-20 bg-white">
+            <div class="max-w-4xl mx-auto px-6">
+
+                <div
+                    class="bg-gradient-to-br from-yellow-50 to-orange-50 border-2 border-orange-200 rounded-3xl p-10 text-center">
+
+                    <div
+                        class="w-20 h-20 mx-auto mb-6 rounded-full bg-orange-100 flex items-center justify-center text-4xl shadow-md">
+                        ☕
+                    </div>
+
+                    <h2 class="text-4xl font-bold text-gray-900 mb-4">
+                        Support StudentCalc
+                    </h2>
+
+                    <p class="text-gray-600 text-lg leading-relaxed max-w-2xl mx-auto mb-8">
+                        StudentCalc is built to help students with useful tools, calculators,
+                        and resources completely free online. If these tools helped you save
+                        time or study better, you can support the project with a small coffee tip.
+                    </p>
+
+                    <p class="text-gray-500 mb-10">
+                        Your support helps improve existing tools, create new features,
+                        and keep the website running smoothly for everyone ❤️
+                    </p>
+
+                    <a href="https://rashtriya.gumroad.com/coffee" target="_blank"
+                        class="inline-flex items-center gap-3 bg-black text-white px-8 py-4 rounded-2xl text-lg font-semibold hover:scale-105 hover:bg-gray-900 transition-all duration-300 shadow-lg">
+
+                        Buy Me a Coffee
+                    </a>
+
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-black w-full overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 pt-10">
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-8 mb-10">
+                <div class="col-span-2 sm:col-span-1">
+                    <div class="brand text-xl font-bold text-white mb-3">StudentCalc</div>
+                    <p class="text-sm leading-relaxed text-zinc-300">Free academic tools built for students, by
+                        students.</p>
+                </div>
+                <div>
+                    <div class="text-lg font-semibold text-white mb-3">Tools</div>
+                    <ul class="space-y-2 text-sm">
+
+                        <li><a href="/75-percent-attendance-calculator/"
+                                class="hover:text-white transition-colors text-zinc-300">75% Attendance Calculator</a>
+                        </li>
+                        <li><a href="/marks-percentage-calculator/"
+                                class="hover:text-white transition-colors text-zinc-300">Marks Percentage Calculator</a>
+                        </li>
+                        <li><a href="/cgpa-to-percentage-calculator/"
+                                class="hover:text-white transition-colors text-zinc-300">CGPA to Percentage Calculator</a>
+                        </li>
+                        <li><a href="/age-calculator/"
+                                class="hover:text-white transition-colors text-zinc-300">Age Calculator</a>
+                        </li>
+                        <li><a href="/easy-grade-calculator/"
+                                class="hover:text-white transition-colors text-zinc-300">Easy Grade Calculator</a>
+                        </li>
+                        <li><a href="/percentile-predictor/"
+                                class="hover:text-white transition-colors text-zinc-300">JEE Percentile Predictor</a>
+                        </li>
+                        <li><a href="/pomodoro-timer/"
+                                class="hover:text-white transition-colors text-zinc-300">Pomodoro Timer</a>
+                        </li>
+                        <li><a href="/word-counter-online/"
+                                class="hover:text-white transition-colors text-zinc-300">Word Counter Online</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <div class="text-lg font-semibold text-white mb-3">Quick Links</div>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="/about/" class="hover:text-white transition-colors text-zinc-300">About</a></li>
+                        <li><a href="/blog/" class="hover:text-white transition-colors text-zinc-300">Blog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <div class="text-lg font-semibold text-white mb-3">Company</div>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="/contact/" class="hover:text-white transition-colors text-zinc-300">Contact</a>
+                        </li>
+                        <li><a href="/privacy-policy/" class="hover:text-white transition-colors text-zinc-300">Privacy
+                                Policy</a></li>
+                        <li><a href="/terms-of-use/" class="hover:text-white transition-colors text-zinc-300">Terms of
+                                Use</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div
+                class="border-t border-zinc-800 pt-6 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-zinc-300">
+                <span>© 2026 <span class="text-white">StudentCalc</span>. All rights reserved.</span>
+                <span>Made with ❤️ in Earth</span>
+            </div>
+        </div>
+
+        <div class="relative leading-none">
+
+            <svg viewBox="0 0 1600 300" class="w-full h-auto block">
+
+                <text x="50%" y="60%" text-anchor="middle" dominant-baseline="middle" fill="white" font-size="230"
+                    font-weight="900" letter-spacing="-6" font-family="Arial, sans-serif">
+
+                    StudentCalc
+
+                </text>
+
+            </svg>
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Marks Percentage Calculator - Calculate Percentage of 10th & 12th</title>
+  <meta name="description" content="Use our free Marks Percentage Calculator to calculate exam marks percentage easily. Learn how to calculate percentage for 10th, 12th class, CBSE, and multiple subjects accurately." />
+  <link rel="canonical" href="https://www.studentcalc.online/marks-percentage-calculator/" />
+    <link rel="shortcut icon" href="/images/logo.png" type="image/x-icon">
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Marks Percentage Calculator - Calculate Percentage of 10th, 12th" />
+  <meta property="og:description" content="Use our free Marks Percentage Calculator to calculate exam marks percentage easily for 10th, 12th class, CBSE, and multiple subjects." />
+  <meta property="og:url" content="https://studentcalc.online/marks-percentage-calculator/" />
+  <meta property="og:site_name" content="StudentCalc" />
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://studentcalc.online/marks-percentage-calculator/#webpage","url":"https://studentcalc.online/marks-percentage-calculator/","name":"Marks Percentage Calculator","isPartOf":{"@id":"https://studentcalc.online/#website"},"description":"Free marks percentage calculator for students to calculate exam percentage for 10th, 12th class, CBSE and multiple subjects.","breadcrumb":{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://studentcalc.online/"},{"@type":"ListItem","position":2,"name":"Marks Percentage Calculator","item":"https://studentcalc.online/marks-percentage-calculator/"}]},"inLanguage":"en"},{"@type":"SoftwareApplication","name":"Marks Percentage Calculator","operatingSystem":"Web","applicationCategory":"EducationalApplication","url":"https://studentcalc.online/marks-percentage-calculator/","description":"An online marks percentage calculator for students to calculate exam marks percentage accurately.","offers":{"@type":"Offer","price":"0","priceCurrency":"INR"}}]}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How to calculate percentage of marks?","acceptedAnswer":{"@type":"Answer","text":"Divide the marks obtained by total marks and multiply by 100. Percentage = (Marks Obtained ÷ Total Marks) × 100."}},{"@type":"Question","name":"How to calculate percentage of marks of 10th class?","acceptedAnswer":{"@type":"Answer","text":"Add marks obtained in all subjects, divide by total maximum marks, and multiply by 100. Applies to CBSE, ICSE, and state boards."}},{"@type":"Question","name":"How to calculate percentage of marks of 12th class?","acceptedAnswer":{"@type":"Answer","text":"Add marks of all subjects, divide by total marks, and multiply by 100 to get the percentage."}},{"@type":"Question","name":"How to calculate percentage of marks in CBSE?","acceptedAnswer":{"@type":"Answer","text":"CBSE uses the standard formula: (Marks Obtained ÷ Total Marks) × 100. StudentCalc uses this exact method."}},{"@type":"Question","name":"Is this marks percentage calculator free?","acceptedAnswer":{"@type":"Answer","text":"Yes, completely free with no login or sign-up required."}}]}
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+    body { font-family: 'Space Grotesk'; }
+
+    input[type=number]::-webkit-inner-spin-button,
+    input[type=number]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
+    input[type=number] { -moz-appearance: textfield; }
+    input:focus { outline: none; border-color: #09090b !important; box-shadow: 0 0 0 3px rgba(9,9,11,0.06); }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes countUp {
+      from { opacity: 0; transform: scale(0.85); }
+      to   { opacity: 1; transform: scale(1); }
+    }
+    @keyframes barGrow {
+      from { width: 0%; }
+    }
+    .fade-up   { animation: fadeUp 0.4s ease forwards; }
+    .count-up  { animation: countUp 0.5s cubic-bezier(.34,1.56,.64,1) forwards; }
+    .bar-grow  { animation: barGrow 0.8s cubic-bezier(.4,0,.2,1) forwards; }
+    .hidden-anim { opacity: 0; }
+  </style>
+</head>
+
+<body class="bg-white">
+
+   <!-- Header -->
+    <header class="bg-[#FEFEFF] fixed w-full z-50 border-b border-zinc-100">
+        <nav class="flex justify-between items-center max-w-7xl mx-auto px-4 sm:px-6 py-2">
+            <a href="/" class="text-xl sm:text-2xl font-bold tracking-tight">
+                <span class="text-zinc-900">Student</span><span class="text-zinc-900">Calc</span>
+            </a>
+
+            <div class="flex items-center gap-2 sm:gap-8">
+                <a href="/about/"
+                    class="text-sm font-medium hover:scale-105 transition-transform py-2 px-1 hidden sm:block">About</a>
+                <a href="/blog/"
+                    class="text-sm font-medium hover:scale-105 transition-transform py-2 px-1 hidden sm:block">Blog</a>
+                <a href="/materials/"
+                    class="text-sm font-medium hover:scale-105 transition-transform py-2 px-1 hidden sm:block">Materials</a>
+                <a href="/contact/"
+                    class="text-sm font-medium hover:scale-105 transition-transform py-2 px-1 hidden sm:block">Contact</a>
+                <!-- Header Support Button -->
+                <a href="https://rashtriya.gumroad.com/coffee" target="_blank"
+                    class="hidden md:flex items-center gap-2 bg-black text-white px-3 py-2 rounded-full font-semibold hover:bg-gray-900 hover:scale-105 transition-all duration-300">
+
+                    ☕ Support Us
+                </a>
+
+                <!-- Hamburger (mobile only) -->
+                <button id="menuBtn" class="sm:hidden p-2 rounded-lg border border-zinc-200 hover:bg-zinc-50 transition"
+                    aria-label="Open menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor" stroke-width="1.5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Overlay -->
+    <div id="overlay" class="fixed inset-0 bg-black/35 z-[200] hidden opacity-0 transition-opacity duration-250"></div>
+
+    <!-- Sidebar -->
+    <aside id="sidebar"
+        class="fixed top-0 right-0 h-full w-60 bg-white z-[201] border-l border-zinc-100 flex flex-col p-5 translate-x-full transition-transform duration-300 ease-in-out"
+        role="dialog" aria-modal="true" aria-label="Navigation menu">
+        <div class="flex justify-between items-center mb-8">
+            <a href="/" class="text-lg font-bold tracking-tight text-zinc-900">StudentCalc</a>
+            <button id="closeBtn" class="p-1.5 rounded-lg border border-zinc-200 hover:bg-zinc-50 transition"
+                aria-label="Close menu">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor" stroke-width="1.5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+        <nav class="flex flex-col gap-1 flex-1">
+            <a href="/about/"
+                class="text-sm font-medium px-3 py-3 rounded-lg hover:bg-zinc-50 transition-colors">About</a>
+            <a href="/blog/"
+                class="text-sm font-medium px-3 py-3 rounded-lg hover:bg-zinc-50 transition-colors">Blog</a>
+            <a href="/materials/"
+                class="text-sm font-medium px-3 py-3 rounded-lg hover:bg-zinc-50 transition-colors">Materials</a>
+            <a href="/contact/" class="text-sm font-medium px-3 py-3 rounded-lg hover:bg-zinc-50 transition-colors">
+                Contact
+            </a>
+        </nav>
+        <a href="https://rashtriya.gumroad.com/coffee"
+            class="mt-auto text-sm font-medium text-center bg-black text-white py-2.5 px-5 rounded-full hover:opacity-80 transition-opacity">
+            ☕ Support Us
+
+        </a>
+    </aside>
+
+    <script>
+        const menuBtn = document.getElementById('menuBtn');
+        const closeBtn = document.getElementById('closeBtn');
+        const sidebar = document.getElementById('sidebar');
+        const overlay = document.getElementById('overlay');
+
+        function openMenu() {
+            sidebar.classList.remove('translate-x-full');
+            overlay.classList.remove('hidden');
+            requestAnimationFrame(() => overlay.classList.remove('opacity-0'));
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeMenu() {
+            sidebar.classList.add('translate-x-full');
+            overlay.classList.add('opacity-0');
+            setTimeout(() => overlay.classList.add('hidden'), 250);
+            document.body.style.overflow = '';
+        }
+
+        menuBtn.addEventListener('click', openMenu);
+        closeBtn.addEventListener('click', closeMenu);
+        overlay.addEventListener('click', closeMenu);
+        document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMenu(); });
+    </script>
+
+  <!-- Hero with gradient -->
+  <section class="bg-gradient-to-b from-teal-50/60 via-white to-white pt-28 pb-16 px-4 text-center border-b border-zinc-100">
+    <nav class="flex items-center justify-center gap-2 text-xs text-zinc-400 mb-6">
+      <a href="/" class="hover:text-zinc-600 transition-colors">Home</a>
+      <span>›</span>
+      <span class="text-zinc-600">Marks Percentage Calculator</span>
+    </nav>
+    <div class="inline-flex items-center gap-2 px-3 py-1 bg-teal-100/70 border border-teal-300 rounded-full text-xs font-medium text-teal-700 mb-5">
+      <span class="w-1.5 h-1.5 rounded-full bg-teal-500 inline-block"></span>
+      Free · No login required · Instant results
+    </div>
+    <h1 class="text-4xl sm:text-6xl font-semibold tracking-tight text-zinc-900 leading-tight max-w-3xl mx-auto">
+      Marks Percentage<br class="hidden sm:block"/> Calculator
+    </h1>
+    <p class="text-zinc-500 mt-5 text-base sm:text-lg max-w-lg mx-auto leading-relaxed">
+      Calculate your exam percentage instantly. Works for 10th, 12th, CBSE, ICSE and all state boards.
+    </p>
+
+    <!-- Trust stats -->
+    <div class="flex items-center justify-center gap-6 sm:gap-10 mt-8 flex-wrap">
+      <div class="text-center">
+        <p class="text-2xl font-bold text-zinc-900">30K+</p>
+        <p class="text-xs text-zinc-400 mt-0.5">Students helped</p>
+      </div>
+      <div class="w-px h-8 bg-zinc-200 hidden sm:block"></div>
+      <div class="text-center">
+        <p class="text-2xl font-bold text-zinc-900">100%</p>
+        <p class="text-xs text-zinc-400 mt-0.5">Free forever</p>
+      </div>
+      <div class="w-px h-8 bg-zinc-200 hidden sm:block"></div>
+      <div class="text-center">
+        <p class="text-2xl font-bold text-zinc-900">CBSE</p>
+        <p class="text-xs text-zinc-400 mt-0.5">Formula used</p>
+      </div>
+    </div>
+  </section>
+
+  <main class="mx-auto max-w-4xl px-4 sm:px-6 py-12">
+
+
+    <!-- Calculator Card — premium look -->
+    <section class="border-2 border-zinc-900 rounded-2xl overflow-hidden mb-8 shadow-[0_8px_40px_-8px_rgba(0,0,0,0.15)]">
+
+      <!-- Card header -->
+      <div class="bg-zinc-900 px-6 sm:px-8 py-5 flex items-center gap-3">
+        <div class="w-9 h-9 rounded-xl bg-teal-400/20 flex items-center justify-center shrink-0">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 text-teal-400">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5"/>
+          </svg>
+        </div>
+        <div>
+          <h2 class="text-white font-semibold text-base">Calculate Your Percentage</h2>
+          <p class="text-zinc-400 text-xs mt-0.5">Enter your obtained and total marks</p>
+        </div>
+        <span class="ml-auto text-xs font-medium bg-teal-400/20 text-teal-400 px-2.5 py-1 rounded-full border border-teal-400/30">MATHS</span>
+      </div>
+
+      <!-- Card body -->
+      <div class="p-6 sm:p-8">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-5">
+          <div class="flex flex-col gap-1.5">
+            <label for="obtained" class="text-sm font-medium text-zinc-700">Marks Obtained</label>
+            <input id="obtained" type="number" placeholder="e.g. 420" min="0"
+              class="w-full border-2 border-zinc-200 rounded-xl px-4 py-3 text-base font-medium text-zinc-900 placeholder-zinc-300 transition-all duration-150 bg-zinc-50/50"/>
+          </div>
+          <div class="flex flex-col gap-1.5">
+            <label for="total" class="text-sm font-medium text-zinc-700">Total Marks</label>
+            <input id="total" type="number" placeholder="e.g. 500" min="1"
+              class="w-full border-2 border-zinc-200 rounded-xl px-4 py-3 text-base font-medium text-zinc-900 placeholder-zinc-300 transition-all duration-150 bg-zinc-50/50"/>
+          </div>
+        </div>
+
+        <button onclick="calculatePercentage()"
+          class="w-full bg-zinc-900 text-white text-sm font-semibold py-3.5 rounded-xl hover:bg-zinc-800 active:scale-[0.98] transition-all duration-150 tracking-wide">
+          Calculate Percentage →
+        </button>
+
+        <!-- Result panel -->
+        <div id="result" class="hidden-anim hidden mt-6">
+
+          <!-- Big percentage display -->
+          <div class="bg-zinc-50 border-2 border-zinc-200 rounded-xl p-6 text-center mb-4">
+            <p class="text-xs font-medium text-zinc-400 uppercase tracking-widest mb-2">Your Result</p>
+            <p id="result-percent" class="text-6xl sm:text-7xl font-bold tracking-tight text-zinc-900 count-up"></p>
+            <p id="result-sub" class="text-sm text-zinc-500 mt-2"></p>
+
+            <!-- Progress bar -->
+            <div class="mt-5 bg-zinc-200 rounded-full h-2.5 overflow-hidden">
+              <div id="result-bar" class="h-full rounded-full bar-grow" style="width:0%"></div>
+            </div>
+            <div class="flex justify-between text-xs text-zinc-400 mt-1.5">
+              <span>0%</span><span>33% Pass</span><span>100%</span>
+            </div>
+          </div>
+
+          <!-- Stats grid -->
+          <div class="grid grid-cols-3 gap-3 mb-4">
+            <div class="border-2 border-zinc-200 rounded-xl p-3 text-center">
+              <p class="text-xs text-zinc-400 mb-1">Grade</p>
+              <p id="result-grade" class="text-sm font-bold"></p>
+            </div>
+            <div class="border-2 border-zinc-200 rounded-xl p-3 text-center">
+              <p class="text-xs text-zinc-400 mb-1">Status</p>
+              <p id="result-status" class="text-sm font-bold"></p>
+            </div>
+            <div class="border-2 border-zinc-200 rounded-xl p-3 text-center">
+              <p class="text-xs text-zinc-400 mb-1">Out of</p>
+              <p id="result-outof" class="text-sm font-bold text-zinc-900"></p>
+            </div>
+          </div>
+
+          <!-- Formula -->
+          <div class="bg-zinc-900 rounded-xl px-5 py-3.5 flex items-center gap-3 mb-3">
+            <span class="text-zinc-500 text-xs shrink-0">Formula</span>
+            <p id="result-formula" class="text-sm font-mono text-teal-400 ml-auto text-right"></p>
+          </div>
+
+          <!-- Tip -->
+          <div id="result-tip" class="rounded-xl px-4 py-3 text-sm font-medium"></div>
+        </div>
+
+        <!-- Example hint -->
+        <div class="mt-5 pt-5 border-t border-zinc-100 flex items-center gap-2">
+          <span class="text-xs text-zinc-400">Example:</span>
+          <span class="text-xs text-zinc-600 font-medium">420 ÷ 500 × 100 = <strong class="text-zinc-900">84%</strong></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Content -->
+    <div class="space-y-4">
+
+      <!-- What is / formula — 2 col on desktop -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <section class="border-2 border-zinc-200 rounded-xl p-6">
+          <h2 class="text-lg font-semibold text-zinc-900 mb-3">What is marks percentage?</h2>
+          <p class="text-zinc-600 text-sm leading-relaxed">Marks percentage expresses a student's score as a number out of 100. It's the universal standard used in report cards, board results, college admissions, and scholarship eligibility across India.</p>
+        </section>
+        <section class="border-2 border-zinc-200 rounded-xl p-6">
+          <h2 class="text-lg font-semibold text-zinc-900 mb-3">The formula</h2>
+          <div class="bg-zinc-50 border border-zinc-200 rounded-lg px-4 py-3 text-center mb-3">
+            <p class="text-sm font-semibold font-mono text-zinc-900">( Obtained ÷ Total ) × 100</p>
+          </div>
+          <p class="text-zinc-600 text-sm leading-relaxed">Universally accepted by CBSE, ICSE, and all state boards. StudentCalc uses exactly this formula — no rounding surprises.</p>
+        </section>
+      </div>
+
+      <!-- Worked example -->
+      <section class="border-2 border-zinc-200 rounded-xl p-6 sm:p-8">
+        <h2 class="text-xl font-semibold text-zinc-900 mb-5">Worked example — Class 10 CBSE</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div class="space-y-2.5">
+            <div class="flex justify-between items-center py-2 border-b border-zinc-100">
+              <span class="text-sm text-zinc-500">Hindi</span>
+              <div class="flex items-center gap-3">
+                <div class="w-20 h-1.5 bg-zinc-100 rounded-full overflow-hidden"><div class="h-full bg-teal-400 rounded-full" style="width:80%"></div></div>
+                <span class="text-sm font-medium text-zinc-900 w-12 text-right">80 / 100</span>
+              </div>
+            </div>
+            <div class="flex justify-between items-center py-2 border-b border-zinc-100">
+              <span class="text-sm text-zinc-500">English</span>
+              <div class="flex items-center gap-3">
+                <div class="w-20 h-1.5 bg-zinc-100 rounded-full overflow-hidden"><div class="h-full bg-teal-400 rounded-full" style="width:92%"></div></div>
+                <span class="text-sm font-medium text-zinc-900 w-12 text-right">92 / 100</span>
+              </div>
+            </div>
+            <div class="flex justify-between items-center py-2 border-b border-zinc-100">
+              <span class="text-sm text-zinc-500">Mathematics</span>
+              <div class="flex items-center gap-3">
+                <div class="w-20 h-1.5 bg-zinc-100 rounded-full overflow-hidden"><div class="h-full bg-teal-400 rounded-full" style="width:88%"></div></div>
+                <span class="text-sm font-medium text-zinc-900 w-12 text-right">88 / 100</span>
+              </div>
+            </div>
+            <div class="flex justify-between items-center py-2 border-b border-zinc-100">
+              <span class="text-sm text-zinc-500">Science</span>
+              <div class="flex items-center gap-3">
+                <div class="w-20 h-1.5 bg-zinc-100 rounded-full overflow-hidden"><div class="h-full bg-teal-400 rounded-full" style="width:85%"></div></div>
+                <span class="text-sm font-medium text-zinc-900 w-12 text-right">85 / 100</span>
+              </div>
+            </div>
+            <div class="flex justify-between items-center py-2">
+              <span class="text-sm text-zinc-500">Social Science</span>
+              <div class="flex items-center gap-3">
+                <div class="w-20 h-1.5 bg-zinc-100 rounded-full overflow-hidden"><div class="h-full bg-teal-400 rounded-full" style="width:90%"></div></div>
+                <span class="text-sm font-medium text-zinc-900 w-12 text-right">90 / 100</span>
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-col justify-center items-center bg-zinc-900 rounded-xl p-6 text-center">
+            <p class="text-zinc-400 text-sm mb-2">Total percentage</p>
+            <p class="text-6xl font-bold text-white mb-1">87%</p>
+            <p class="text-zinc-500 text-xs mb-4">(435 ÷ 500) × 100</p>
+            <div class="bg-teal-400/20 border border-teal-400/30 rounded-lg px-3 py-1.5">
+              <span class="text-teal-400 text-xs font-medium">A · Very Good</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Board-specific sections in a 2-col grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <section class="border-2 border-zinc-200 rounded-xl p-6">
+          <span class="text-xs font-semibold bg-blue-100 text-blue-700 px-2.5 py-0.5 rounded-full">10th Class</span>
+          <h2 class="text-lg font-semibold text-zinc-900 mt-3 mb-2">Percentage for 10th class</h2>
+          <p class="text-zinc-600 text-sm leading-relaxed">Add all subject marks, divide by the total maximum, multiply by 100. Works identically for CBSE, ICSE, and all state boards.</p>
+        </section>
+        <section class="border-2 border-zinc-200 rounded-xl p-6">
+          <span class="text-xs font-semibold bg-purple-100 text-purple-700 px-2.5 py-0.5 rounded-full">12th Class</span>
+          <h2 class="text-lg font-semibold text-zinc-900 mt-3 mb-2">Percentage for 12th class</h2>
+          <p class="text-zinc-600 text-sm leading-relaxed">Same formula — works for 5 or 6 subjects. Just total your marks before entering them. Critical for college admissions and entrance exams.</p>
+        </section>
+        <section class="border-2 border-zinc-200 rounded-xl p-6">
+          <span class="text-xs font-semibold bg-teal-100 text-teal-700 px-2.5 py-0.5 rounded-full">CBSE</span>
+          <h2 class="text-lg font-semibold text-zinc-900 mt-3 mb-2">CBSE percentage</h2>
+          <p class="text-zinc-600 text-sm leading-relaxed">CBSE uses the standard formula with no hidden adjustments. StudentCalc follows this exactly, making it reliable for all CBSE students.</p>
+        </section>
+        <section class="border-2 border-zinc-200 rounded-xl p-6">
+          <span class="text-xs font-semibold bg-orange-100 text-orange-700 px-2.5 py-0.5 rounded-full">Any Exam</span>
+          <h2 class="text-lg font-semibold text-zinc-900 mt-3 mb-2">Competitive exams</h2>
+          <p class="text-zinc-600 text-sm leading-relaxed">Works for JEE, NEET, entrance tests — any exam where you know your obtained and total marks. No subject-specific setup needed.</p>
+        </section>
+      </div>
+
+      <!-- Why use StudentCalc -->
+      <section class="border-2 border-zinc-900 rounded-xl p-6 sm:p-8 bg-zinc-900 text-white">
+        <h2 class="text-xl font-semibold mb-6">Why use StudentCalc?</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div class="flex items-start gap-3">
+            <div class="w-8 h-8 rounded-lg bg-teal-400/20 flex items-center justify-center shrink-0 mt-0.5">
+              <span class="text-teal-400 text-sm">✓</span>
+            </div>
+            <div>
+              <p class="text-sm font-medium text-white">Built for Indian students</p>
+              <p class="text-xs text-zinc-400 mt-0.5 leading-relaxed">Designed around CBSE, ICSE and all state board formats.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <div class="w-8 h-8 rounded-lg bg-teal-400/20 flex items-center justify-center shrink-0 mt-0.5">
+              <span class="text-teal-400 text-sm">✓</span>
+            </div>
+            <div>
+              <p class="text-sm font-medium text-white">Accurate standard formula</p>
+              <p class="text-xs text-zinc-400 mt-0.5 leading-relaxed">Uses the exact formula accepted by schools and universities.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <div class="w-8 h-8 rounded-lg bg-teal-400/20 flex items-center justify-center shrink-0 mt-0.5">
+              <span class="text-teal-400 text-sm">✓</span>
+            </div>
+            <div>
+              <p class="text-sm font-medium text-white">Zero friction</p>
+              <p class="text-xs text-zinc-400 mt-0.5 leading-relaxed">No account, no captcha, no ads between you and your result.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <div class="w-8 h-8 rounded-lg bg-teal-400/20 flex items-center justify-center shrink-0 mt-0.5">
+              <span class="text-teal-400 text-sm">✓</span>
+            </div>
+            <div>
+              <p class="text-sm font-medium text-white">Grade + pass/fail instant</p>
+              <p class="text-xs text-zinc-400 mt-0.5 leading-relaxed">See your grade and status alongside your percentage.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="border-2 border-zinc-200 rounded-xl p-6 sm:p-8">
+        <h2 class="text-xl font-semibold text-zinc-900 mb-6">Frequently asked questions</h2>
+        <div class="space-y-0">
+          <details class="group border-b border-zinc-100 py-4">
+            <summary class="text-sm font-semibold text-zinc-900 cursor-pointer flex justify-between items-center list-none">
+              Is this marks percentage calculator accurate?
+              <span class="text-zinc-400 group-open:rotate-180 transition-transform duration-200 shrink-0 ml-3">↓</span>
+            </summary>
+            <p class="text-zinc-600 text-sm leading-relaxed mt-3">Yes — it uses the standard academic percentage formula accepted by all Indian schools and boards including CBSE and ICSE. All calculations happen in your browser.</p>
+          </details>
+          <details class="group border-b border-zinc-100 py-4">
+            <summary class="text-sm font-semibold text-zinc-900 cursor-pointer flex justify-between items-center list-none">
+              Can I calculate percentage for multiple subjects?
+              <span class="text-zinc-400 group-open:rotate-180 transition-transform duration-200 shrink-0 ml-3">↓</span>
+            </summary>
+            <p class="text-zinc-600 text-sm leading-relaxed mt-3">Yes. Add all your subject marks together for "Marks Obtained" and add all the subject maximums for "Total Marks", then hit calculate.</p>
+          </details>
+          <details class="group border-b border-zinc-100 py-4">
+            <summary class="text-sm font-semibold text-zinc-900 cursor-pointer flex justify-between items-center list-none">
+              Can I use this for competitive exams?
+              <span class="text-zinc-400 group-open:rotate-180 transition-transform duration-200 shrink-0 ml-3">↓</span>
+            </summary>
+            <p class="text-zinc-600 text-sm leading-relaxed mt-3">Absolutely — JEE, NEET, entrance tests, any exam. As long as you know the marks obtained and total marks, this calculator works.</p>
+          </details>
+          <details class="group py-4">
+            <summary class="text-sm font-semibold text-zinc-900 cursor-pointer flex justify-between items-center list-none">
+              Is this calculator free?
+              <span class="text-zinc-400 group-open:rotate-180 transition-transform duration-200 shrink-0 ml-3">↓</span>
+            </summary>
+            <p class="text-zinc-600 text-sm leading-relaxed mt-3">100% free, always. No account, no payment, no hidden limits. Every tool on StudentCalc is built to stay free for students.</p>
+          </details>
+        </div>
+      </section>
+
+      <!-- Related tools -->
+      <section class="border-2 border-zinc-200 rounded-xl p-6 sm:p-8">
+        <h2 class="text-xl font-semibold text-zinc-900 mb-5">More student tools</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <a href="/cgpa-to-percentage-calculator/" class="group flex items-center gap-4 p-4 border-2 border-zinc-200 rounded-xl hover:border-zinc-400 hover:scale-[1.02] transition-all duration-200">
+            <div class="w-10 h-10 rounded-xl bg-green-100 flex items-center justify-center text-green-700 shrink-0 text-sm font-bold">%</div>
+            <div>
+              <p class="text-sm font-semibold text-zinc-900">CGPA to Percentage</p>
+              <p class="text-xs text-zinc-500 mt-0.5">Convert CGPA to percentage instantly</p>
+            </div>
+            <span class="ml-auto text-zinc-300 group-hover:text-zinc-600 transition-colors">→</span>
+          </a>
+          <a href="/75-percent-attendance-calculator/" class="group flex items-center gap-4 p-4 border-2 border-zinc-200 rounded-xl hover:border-zinc-400 hover:scale-[1.02] transition-all duration-200">
+            <div class="w-10 h-10 rounded-xl bg-blue-100 flex items-center justify-center text-blue-700 shrink-0">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5"><path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5"/></svg>
+            </div>
+            <div>
+              <p class="text-sm font-semibold text-zinc-900">75% Attendance Calculator</p>
+              <p class="text-xs text-zinc-500 mt-0.5">Check your attendance compliance</p>
+            </div>
+            <span class="ml-auto text-zinc-300 group-hover:text-zinc-600 transition-colors">→</span>
+          </a>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-black w-full overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 pt-10">
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-8 mb-10">
+        <div class="col-span-2 sm:col-span-1">
+          <div class="text-xl font-bold text-white mb-3">StudentCalc</div>
+          <p class="text-sm leading-relaxed text-zinc-300">Free academic tools built for students, by students.</p>
+        </div>
+        <div>
+          <div class="text-lg font-semibold text-white mb-3">Tools</div>
+          <ul class="space-y-2 text-sm">
+            <li><a href="/75-percent-attendance-calculator/" class="hover:text-white transition-colors text-zinc-300">75% Attendance Calculator</a></li>
+            <li><a href="/marks-percentage-calculator/" class="hover:text-white transition-colors text-zinc-300">Marks Percentage Calculator</a></li>
+                        <li><a href="/cgpa-to-percentage-calculator/" class="hover:text-white transition-colors text-zinc-300">CGPA to Percentage Calculator</a></li>
+                        <li><a href="/age-calculator/" class="hover:text-white transition-colors text-zinc-300">Age Calculator</a></li>
+                        <li><a href="/easy-grade-calculator/" class="hover:text-white transition-colors text-zinc-300">Easy Grade Calculator</a></li>
+                        <li><a href="/percentile-predictor/" class="hover:text-white transition-colors text-zinc-300">JEE Percentile Predictor</a></li>
+                        <li><a href="/pomodoro-timer/" class="hover:text-white transition-colors text-zinc-300">Pomodoro Timer</a></li>
+                        <li><a href="/word-counter-online/" class="hover:text-white transition-colors text-zinc-300">Word Counter Online</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="text-lg font-semibold text-white mb-3">Quick Links</div>
+          <ul class="space-y-2 text-sm">
+            <li><a href="/about/" class="hover:text-white transition-colors text-zinc-300">About</a></li>
+            <li><a href="/blog/" class="hover:text-white transition-colors text-zinc-300">Blog</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="text-lg font-semibold text-white mb-3">Company</div>
+          <ul class="space-y-2 text-sm">
+            <li><a href="/contact/" class="hover:text-white transition-colors text-zinc-300">Contact</a></li>
+            <li><a href="/privacy-policy/" class="hover:text-white transition-colors text-zinc-300">Privacy Policy</a></li>
+            <li><a href="/terms-of-use/" class="hover:text-white transition-colors text-zinc-300">Terms of Use</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-zinc-800 pt-6 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-zinc-300">
+        <span>© 2026 <span class="text-white">StudentCalc</span>. All rights reserved.</span>
+        <span>Made with ❤️ in Earth</span>
+      </div>
+    </div>
+    <div class="relative leading-none">
+      <svg viewBox="0 0 1600 300" class="w-full h-auto block">
+        <text x="50%" y="60%" text-anchor="middle" dominant-baseline="middle" fill="white" font-size="230" font-weight="900" letter-spacing="-6" font-family="Arial, sans-serif">StudentCalc</text>
+      </svg>
+    </div>
+  </footer>
+
+  <script>
+    function calculatePercentage() {
+      const obtained = parseFloat(document.getElementById('obtained').value);
+      const total    = parseFloat(document.getElementById('total').value);
+      const resultEl = document.getElementById('result');
+
+      if (isNaN(obtained) || isNaN(total) || total <= 0 || obtained < 0 || obtained > total) {
+        document.getElementById('result-percent').textContent  = '—';
+        document.getElementById('result-percent').className    = 'text-6xl sm:text-7xl font-bold tracking-tight text-red-500 count-up';
+        document.getElementById('result-sub').textContent      = 'Please enter valid marks. Obtained cannot exceed total.';
+        document.getElementById('result-grade').textContent    = '—';
+        document.getElementById('result-status').textContent   = '—';
+        document.getElementById('result-outof').textContent    = '—';
+        document.getElementById('result-formula').textContent  = '—';
+        document.getElementById('result-bar').style.width      = '0%';
+        document.getElementById('result-bar').className        = 'h-full rounded-full bg-red-400';
+        document.getElementById('result-tip').className        = '';
+        document.getElementById('result-tip').textContent      = '';
+        showResult(resultEl); return;
+      }
+
+      const pct = (obtained / total) * 100;
+
+      let grade, gradeColor, barColor;
+      if      (pct >= 90) { grade='A+'; gradeColor='text-green-600';  barColor='bg-green-500'; }
+      else if (pct >= 80) { grade='A';  gradeColor='text-green-600';  barColor='bg-green-400'; }
+      else if (pct >= 70) { grade='B+'; gradeColor='text-blue-600';   barColor='bg-blue-400';  }
+      else if (pct >= 60) { grade='B';  gradeColor='text-blue-600';   barColor='bg-blue-400';  }
+      else if (pct >= 33) { grade='C';  gradeColor='text-yellow-600'; barColor='bg-yellow-400';}
+      else                { grade='F';  gradeColor='text-red-600';    barColor='bg-red-400';   }
+
+      const passed = pct >= 33;
+
+      document.getElementById('result-percent').textContent  = pct.toFixed(2) + '%';
+      document.getElementById('result-percent').className    = `text-6xl sm:text-7xl font-bold tracking-tight count-up ${passed ? 'text-zinc-900' : 'text-red-500'}`;
+      document.getElementById('result-sub').textContent      = `${obtained} marks out of ${total}`;
+      document.getElementById('result-grade').textContent    = grade;
+      document.getElementById('result-grade').className      = `text-sm font-bold ${gradeColor}`;
+      document.getElementById('result-status').textContent   = passed ? '✅ Passed' : '❌ Failed';
+      document.getElementById('result-status').className     = `text-sm font-bold ${passed ? 'text-green-600' : 'text-red-600'}`;
+      document.getElementById('result-outof').textContent    = `${obtained}/${total}`;
+      document.getElementById('result-formula').textContent  = `(${obtained} ÷ ${total}) × 100 = ${pct.toFixed(2)}%`;
+
+      const bar = document.getElementById('result-bar');
+      bar.className = `h-full rounded-full bar-grow ${barColor}`;
+      bar.style.width = Math.min(pct, 100) + '%';
+
+      const tip = document.getElementById('result-tip');
+      if (passed) {
+        tip.className   = 'rounded-xl px-4 py-3 text-sm font-medium bg-green-50 border-2 border-green-200 text-green-800';
+        tip.textContent = `🎉 You passed with ${pct.toFixed(2)}%! Keep up the great work.`;
+      } else {
+        const needed = Math.ceil((33 * total) / 100) - obtained;
+        tip.className   = 'rounded-xl px-4 py-3 text-sm font-medium bg-red-50 border-2 border-red-200 text-red-800';
+        tip.textContent = `You need ${needed} more marks to pass (33%). Don't give up!`;
+      }
+
+      showResult(resultEl);
+      if (window.innerWidth < 768) resultEl.scrollIntoView({ behavior:'smooth', block:'nearest' });
+    }
+
+    function showResult(el) {
+      el.classList.remove('hidden','hidden-anim');
+      el.classList.add('fade-up');
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('#obtained,#total').forEach(inp => {
+        inp.addEventListener('keypress', e => { if (e.key === 'Enter') calculatePercentage(); });
+      });
+    });
+  </script>
+
+</body>
+</html>

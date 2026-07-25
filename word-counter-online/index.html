@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6QV83YGZL0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-6QV83YGZL0');
+  </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Word Counter Online - Free Word & Character Count Tool</title>
+
+    <meta name="description"
+        content="Use our free Word Counter Online tool to count words, characters, sentences, and paragraphs instantly. Perfect for essays, articles, and SEO content." />
+
+    <link rel="canonical" href="https://studentcalc.online/word-counter-online/" />
+
+  <link rel="shortcut icon" href="/android-chrome-192x192.png" type="image/x-icon">
+
+
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Word Counter Online - Free Word & Character Count Tool" />
+    <meta property="og:description"
+        content="Count words, characters, sentences, and paragraphs instantly. Perfect for essays, articles, and SEO content." />
+    <meta property="og:url" content="https://studentcalc.online/word-counter-online/" />
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebPage",
+          "@id": "https://studentcalc.online/word-counter-online/#webpage",
+          "url": "https://studentcalc.online/word-counter-online/",
+          "name": "Word Counter Online - Free Word & Character Count Tool",
+          "description": "Count words, characters, sentences, paragraphs, and reading time instantly. Perfect for writers, students, and content creators.",
+          "inLanguage": "en"
+        },
+        {
+          "@type": "SoftwareApplication",
+          "name": "Word Counter Online",
+          "operatingSystem": "Web",
+          "applicationCategory": "EducationalApplication",
+          "url": "https://studentcalc.online/word-counter-online/",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+          }
+        }
+      ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How does the word counter work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Our word counter analyzes your text in real-time, counting words, characters (with and without spaces), sentences, paragraphs, and estimating reading time."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between word count and character count?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Word count counts the number of words in your text, while character count counts every single character including letters, numbers, spaces, and punctuation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How many words are in a standard A4 page?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A standard A4 page with single spacing contains approximately 500 words. With double spacing, it's about 250 words."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How accurate is the word counter?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Our word counter is highly accurate and matches the counting methods used by Microsoft Word, Google Docs, and other professional writing tools."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Boldonse&family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        body {
+            font-family: 'Google Sans';
+        }
+
+        /* Custom scrollbar */
+        textarea::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        textarea::-webkit-scrollbar-track {
+            background: #1f2937;
+            border-radius: 4px;
+        }
+
+        textarea::-webkit-scrollbar-thumb {
+            background: #4b5563;
+            border-radius: 4px;
+        }
+
+        textarea::-webkit-scrollbar-thumb:hover {
+            background: #6b7280;
+        }
+
+        /* Animation for stats update */
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.05);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .stat-update {
+            animation: pulse 0.3s ease-in-out;
+        }
+    </style>
+</head>
+
+<body class="bg-zinc-900 text-zinc-300 min-h-screen">
+
+
+    <header class="bg-zinc-900/90 border-b border-zinc-800">
+        <nav class="flex justify-between items-center max-w-7xl mx-auto px-4 sm:px-6 py-4">
+            <a href="/" class="text-xl sm:text-2xl font-bold tracking-tight">
+                <span class="text-white">Student</span><span class="text-blue-500">Calc</span><span
+                    class="text-sm text-blue-400/70 font-normal">.online</span>
+            </a>
+
+            <div class="flex items-center gap-2 sm:gap-8">
+                <a href="/"
+                    class="text-sm font-medium hover:scale-107 transition-transform duration-200 py-2 px-1">Home</a>
+                <a href="/blog/"
+                    class="text-sm font-medium hover:scale-107 transition-transform duration-200 py-2 px-1 hidden sm:block">Blog</a>
+                <a href="/about/"
+                    class="text-sm font-medium hover:scale-107 transition-transform duration-200 py-2 px-1 hidden sm:block">About</a>
+                <a href="/contact/"
+                    class="text-sm font-medium bg-blue-600 hover:scale-107 text-white py-2.5 px-5 rounded-full shadow-lg hover:shadow-xl transition-transform duration-200">
+                    Contact
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 py-8">
+        <!-- HERO SECTION -->
+        <div class="text-center mb-8 md:mb-12">
+            <div
+                class="inline-flex items-center gap-2 mb-4 px-4 py-2 bg-blue-500/10 rounded-full border border-blue-500/20">
+                <span class="text-blue-400 text-sm font-medium">Writing Tool</span>
+            </div>
+            <h1
+                class="text-3xl md:text-5xl font-bold mb-4 md:mb-6 bg-gradient-to-r from-white via-white to-blue-400 bg-clip-text text-transparent">
+                Word Counter Online - Free Word & Character Count Tool
+            </h1>
+            <p class="text-base md:text-lg text-zinc-400 max-w-2xl mx-auto leading-relaxed">
+                Count words, characters, sentences, paragraphs, and reading time instantly. Perfect for essays,
+                articles, social media posts, and SEO content.
+            </p>
+        </div>
+
+        <!-- CALCULATOR CARD -->
+        <section class="mb-4">
+            <div class="bg-zinc-900 rounded-2xl p-6 md:p-8 border border-zinc-700/50">
+                <div class="mb-6">
+                    <div
+                        class="w-12 h-12 md:w-14 md:h-14 bg-gradient-to-br from-blue-500/20 to-blue-600/10 rounded-xl flex items-center justify-center mx-auto mb-4">
+                        <span class="text-xl md:text-2xl font-bold text-blue-400">📝</span>
+                    </div>
+                    <h2 class="text-xl md:text-2xl font-semibold text-white text-center mb-2">Word & Character Counter
+                    </h2>
+                    <p class="text-zinc-400 text-center text-sm md:text-base">Paste or type your text below to analyze
+                    </p>
+                </div>
+
+                <!-- TEXT INPUT AREA -->
+                <div class="space-y-6">
+                    <div class="relative">
+                        <textarea id="textInput" rows="12" placeholder="Start typing or paste your text here..."
+                            class="w-full bg-zinc-800/50 border border-zinc-700 rounded-xl px-4 py-4 text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition resize-none font-medium leading-relaxed">
+Welcome to our free Word Counter Online tool! This is a sample text to show you how the word counter works. You can start typing your own content or paste text from any document.
+
+Our tool will automatically count:
+- Words
+- Characters (with and without spaces)
+- Sentences
+- Paragraphs
+- Reading time
+
+Try it now by typing or pasting your own text. The counts will update in real-time as you type!</textarea>
+                        <div class="absolute bottom-4 right-4 flex gap-2">
+                            <button onclick="clearText()"
+                                class="text-xs bg-zinc-800 hover:bg-zinc-700 text-zinc-300 px-3 py-1.5 rounded-lg transition">
+                                Clear
+                            </button>
+                            <button onclick="pasteText()"
+                                class="text-xs bg-blue-600 hover:bg-blue-700 text-white px-3 py-1.5 rounded-lg transition">
+                                Paste
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- QUICK ACTION BUTTONS -->
+                    <div class="flex flex-wrap gap-3">
+                        <button onclick="insertSampleText()"
+                            class="text-sm bg-zinc-800 hover:bg-zinc-700 text-zinc-300 px-4 py-2 rounded-lg transition flex items-center gap-2">
+                            <span>📄</span> Sample Text
+                        </button>
+                        <button onclick="convertToUppercase()"
+                            class="text-sm bg-zinc-800 hover:bg-zinc-700 text-zinc-300 px-4 py-2 rounded-lg transition flex items-center gap-2">
+                            <span>⬆️</span> UPPERCASE
+                        </button>
+                        <button onclick="convertToLowercase()"
+                            class="text-sm bg-zinc-800 hover:bg-zinc-700 text-zinc-300 px-4 py-2 rounded-lg transition flex items-center gap-2">
+                            <span>⬇️</span> lowercase
+                        </button>
+                        <button onclick="removeExtraSpaces()"
+                            class="text-sm bg-zinc-800 hover:bg-zinc-700 text-zinc-300 px-4 py-2 rounded-lg transition flex items-center gap-2">
+                            <span>✂️</span> Trim Spaces
+                        </button>
+                        <button onclick="copyText()"
+                            class="text-sm bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition flex items-center gap-2 ml-auto">
+                            <span>📋</span> Copy Text
+                        </button>
+                    </div>
+
+                    <!-- STATS DISPLAY -->
+                    <div id="stats" class="grid grid-cols-2 md:grid-cols-5 gap-4 mt-6">
+                        <!-- Stats will be populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTENT SECTIONS -->
+        <div class="space-y-4">
+
+            <section class="bg-zinc-900 rounded-2xl p-6 md:p-8 border border-zinc-700/50">
+                <h2 class="text-2xl font-semibold text-white mb-4">What is a Word Counter?</h2>
+                <p class="text-zinc-400 mb-4">
+                    A word counter is a tool that analyzes text to count various elements including words, characters,
+                    sentences, paragraphs, and estimates reading time. It's essential for writers, students, content
+                    creators, and professionals who need to meet specific length requirements.
+                </p>
+                <p class="text-zinc-400">
+                    Our word counter works in real-time, updating counts as you type. It's designed to be accurate and
+                    fast, matching the counting methods used by popular writing software like Microsoft Word and Google
+                    Docs.
+                </p>
+            </section>
+
+            <!-- HOW IT WORKS -->
+            <section class="bg-zinc-900 rounded-2xl p-6 md:p-8 border border-zinc-700/50">
+                <h2 class="text-2xl font-semibold text-white mb-4">How Word Counting Works</h2>
+                <p class="text-zinc-400 mb-4">
+                    Our word counter uses sophisticated algorithms to accurately count text elements:
+                </p>
+                <div class="bg-zinc-800/30 rounded-xl p-4 mb-4">
+                    <ul class="list-disc ml-6 space-y-2 text-zinc-300">
+                        <li><span class="font-medium text-white">Words:</span> Counts sequences of characters separated
+                            by spaces</li>
+                        <li><span class="font-medium text-white">Characters:</span> Counts every character including
+                            letters, numbers, punctuation, and spaces</li>
+                        <li><span class="font-medium text-white">Characters (no spaces):</span> Counts all characters
+                            except spaces</li>
+                        <li><span class="font-medium text-white">Sentences:</span> Counts text segments ending with . !
+                            or ?</li>
+                        <li><span class="font-medium text-white">Paragraphs:</span> Counts text blocks separated by line
+                            breaks</li>
+                        <li><span class="font-medium text-white">Reading Time:</span> Estimates based on average reading
+                            speed of 200-250 words per minute</li>
+                    </ul>
+                </div>
+                <p class="text-zinc-400">
+                    The tool is optimized for accuracy and handles edge cases like hyphenated words, abbreviations, and
+                    special characters correctly.
+                </p>
+            </section>
+
+            <!-- WORD COUNT GUIDELINES -->
+            <section class="bg-zinc-900 rounded-2xl p-6 md:p-8 border border-zinc-700/50">
+                <h2 class="text-2xl font-semibold text-white mb-6">Common Word Count Requirements</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-zinc-800/30 rounded-xl p-5">
+                        <h3 class="font-semibold text-white mb-3 flex items-center gap-2">
+                            <span class="text-blue-400">📚</span> Academic Writing
+                        </h3>
+                        <ul class="space-y-2 text-sm text-zinc-400">
+                            <li>• Essay: 500-1000 words</li>
+                            <li>• Research paper: 3000-5000 words</li>
+                            <li>• Thesis: 10,000-20,000 words</li>
+                            <li>• Abstract: 150-300 words</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-zinc-800/30 rounded-xl p-5">
+                        <h3 class="font-semibold text-white mb-3 flex items-center gap-2">
+                            <span class="text-blue-400">📱</span> Digital Content
+                        </h3>
+                        <ul class="space-y-2 text-sm text-zinc-400">
+                            <li>• Blog post: 1000-2500 words</li>
+                            <li>• SEO article: 500-2000 words</li>
+                            <li>• Social media post: 100-280 characters</li>
+                            <li>• Email newsletter: 300-500 words</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-zinc-800/30 rounded-xl p-5">
+                        <h3 class="font-semibold text-white mb-3 flex items-center gap-2">
+                            <span class="text-blue-400">💼</span> Professional Documents
+                        </h3>
+                        <ul class="space-y-2 text-sm text-zinc-400">
+                            <li>• Cover letter: 250-400 words</li>
+                            <li>• Resume: 300-500 words</li>
+                            <li>• Business proposal: 1500-3000 words</li>
+                            <li>• Executive summary: 200-300 words</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-zinc-800/30 rounded-xl p-5">
+                        <h3 class="font-semibold text-white mb-3 flex items-center gap-2">
+                            <span class="text-blue-400">📖</span> Publishing
+                        </h3>
+                        <ul class="space-y-2 text-sm text-zinc-400">
+                            <li>• Short story: 1000-7500 words</li>
+                            <li>• Novel chapter: 3000-5000 words</li>
+                            <li>• Novel: 70,000-100,000 words</li>
+                            <li>• Children's book: 500-800 words</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- IMPORTANCE SECTION -->
+            <section class="bg-zinc-900 rounded-2xl p-6 md:p-8 border border-zinc-700/50">
+                <h2 class="text-2xl font-semibold text-white mb-4">Why Word Count Matters</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="flex items-start gap-3">
+                        <div class="w-8 h-8 bg-blue-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <span class="text-blue-400 text-sm">🎓</span>
+                        </div>
+                        <div>
+                            <h3 class="font-medium text-white mb-1">Academic Requirements</h3>
+                            <p class="text-zinc-400 text-sm">Meet essay and research paper length requirements</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <div class="w-8 h-8 bg-blue-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <span class="text-blue-400 text-sm">🔍</span>
+                        </div>
+                        <div>
+                            <h3 class="font-medium text-white mb-1">SEO Optimization</h3>
+                            <p class="text-zinc-400 text-sm">Create content with optimal length for search engines</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <div class="w-8 h-8 bg-blue-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <span class="text-blue-400 text-sm">⏱️</span>
+                        </div>
+                        <div>
+                            <h3 class="font-medium text-white mb-1">Reading Time</h3>
+                            <p class="text-zinc-400 text-sm">Estimate how long content will take to read</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <div class="w-8 h-8 bg-blue-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <span class="text-blue-400 text-sm">📊</span>
+                        </div>
+                        <div>
+                            <h3 class="font-medium text-white mb-1">Content Planning</h3>
+                            <p class="text-zinc-400 text-sm">Plan and structure content based on target length</p>
+                        </div>
+                    </div>
+                </div>
+
+                <h2 class="text-2xl font-semibold text-white mb-4 mt-6">Who Should Use This Word Counter?</h2>
+                <ul class="list-disc ml-6 space-y-2 text-zinc-400">
+                    <li>Students writing essays and research papers</li>
+                    <li>Bloggers and content creators</li>
+                    <li>SEO specialists and digital marketers</li>
+                    <li>Authors and writers</li>
+                    <li>Social media managers</li>
+                    <li>Academic researchers</li>
+                    <li>Anyone who needs to count words or characters</li>
+                </ul>
+            </section>
+
+            <!-- FAQ SECTION -->
+            <section class="bg-zinc-900 rounded-2xl p-6 md:p-8 border border-zinc-700/50">
+                <h2 class="text-2xl font-semibold text-white mb-6">Frequently Asked Questions</h2>
+                <div class="space-y-6">
+                    <div>
+                        <h3 class="text-lg font-medium text-white mb-2">How accurate is this word counter?</h3>
+                        <p class="text-zinc-400">Our word counter is highly accurate and matches the counting methods
+                            used by Microsoft Word, Google Docs, and other professional writing tools. It handles edge
+                            cases like hyphenated words, abbreviations, and special characters correctly.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-medium text-white mb-2">What's the difference between word count and
+                            character count?</h3>
+                        <p class="text-zinc-400">Word count counts the number of words in your text (sequences of
+                            characters separated by spaces). Character count counts every single character including
+                            letters, numbers, punctuation, and spaces.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-medium text-white mb-2">How is reading time calculated?</h3>
+                        <p class="text-zinc-400">Reading time is calculated based on average reading speed of 200 words
+                            per minute for general content and 250 words per minute for easy-to-read content. We use 225
+                            words per minute as the average.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-medium text-white mb-2">Does the word counter work for all languages?
+                        </h3>
+                        <p class="text-zinc-400">Yes, our word counter works for any language that uses spaces between
+                            words. For languages that don't use spaces (like Chinese or Japanese), it counts characters
+                            instead of words.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="bg-zinc-900 rounded-2xl p-6 md:p-8 border border-zinc-700/50">
+                <h2 class="text-2xl font-semibold text-white mb-6">More Student Tools</h2>
+                <div class="grid grid-cols-1 gap-4">
+                    <a href="/cgpa-to-percentage-calculator/"
+                        class="group bg-zinc-800/30 rounded-xl p-4 border border-zinc-700/30 flex items-center gap-4">
+                        <div class="w-10 h-10 bg-blue-500/20 rounded-lg flex items-center justify-center">
+                            <span class="text-blue-400 font-bold">CGPA</span>
+                        </div>
+                        <div>
+                            <h3 class="font-medium text-white group-hover:text-blue-400">CGPA to Percentage Converter
+                            </h3>
+                            <p class="text-zinc-400 text-sm">Convert CGPA to percentage instantly</p>
+                        </div>
+                    </a>
+                    <a href="/75-percent-attendance-calculator/"
+                        class="group bg-zinc-800/30 rounded-xl p-4 border border-zinc-700/30 flex items-center gap-4">
+                        <div class="w-10 h-10 bg-blue-500/20 rounded-lg flex items-center justify-center">
+                            <span class="text-blue-400 font-bold">75%</span>
+                        </div>
+                        <div>
+                            <h3 class="font-medium text-white group-hover:text-blue-400">75% Attendance Calculator</h3>
+                            <p class="text-zinc-400 text-sm">Check class attendance compliance</p>
+                        </div>
+                    </a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+
+    <footer class="bg-gradient-to-t from-zinc-900 to-zinc-950 border-t border-zinc-800 mt-20">
+        <div class="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 text-zinc-400">
+            <div class="space-y-4">
+                <div class="flex items-center gap-3">
+                    <div class=" h-10 flex items-center justify-center">
+                                   <img src="/android-chrome-192x192.png" class="h-full rounded-xl border-2 border-zinc-800" alt="">
+
+                    </div>
+                    <div>
+                        <h3 href="/" class="text-xl sm:text-2xl font-bold tracking-tight">
+                            <span class="text-white">Student</span><span class="text-blue-500">Calc</span><span
+                                class="text-sm text-blue-400/70 font-normal hidden sm:inline">.online</span>
+                        </h3>
+                        <p class="text-xs text-blue-400/70">Academic Tools for Precise Results</p>
+                    </div>
+                </div>
+                <p class="text-sm leading-relaxed">
+                    Providing students with free, accurate, and reliable calculators for academic planning. Calculate
+                    percentages,
+                    convert grades, and track attendance with confidence.
+                </p>
+            </div>
+
+            <div>
+                <h4 class="text-white font-semibold text-lg mb-4">Student Tools</h4>
+                <ul class="space-y-3">
+                    <li><a href="/marks-percentage-calculator/"
+                            class="hover:text-white transition-colors duration-200  flex items-center gap-2">
+                            Marks Percentage
+                            Calculator</a></li>
+                    <li><a href="/cgpa-to-percentage-calculator/"
+                            class="hover:text-white transition-colors duration-200 flex items-center gap-2"> CGPA to
+                            Percentage</a>
+                    </li>
+                    <li><a href="/75-percent-attendance-calculator/"
+                            class="hover:text-white transition-colors duration-200  flex items-center gap-2"> 75%
+                            Attendance
+                            Calculator</a></li>
+                    <li><a href="/age-calculator/"
+                            class="hover:text-white transition-colors duration-200 flex items-center gap-2">
+                            Age Calculator</a></li>
+                    <li><a href="/word-counter-online/"
+                            class="hover:text-white transition-colors duration-200 text-blue-400 font-medium flex items-center gap-2">
+                            Word Counter Online</a></li>
+                    <li><a href="/easy-grade-calculator/"
+                            class="hover:text-white transition-colors duration-200 flex items-center gap-2">
+                            Grade Calculator</a></li>
+                    <li><a href="/percentile-predictor/"
+                            class="hover:text-white transition-colors duration-200 flex items-center gap-2">
+                            JEE Percentile Predictor</a></li>
+                    <li><a href="/pomodoro-timer/"
+                            class="hover:text-white transition-colors duration-200 flex items-center gap-2">
+                            Pomodoro Timer</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-white font-semibold text-lg mb-4">Pages</h4>
+                <ul class="space-y-3">
+                    <li><a href="/" class="hover:text-white transition-colors duration-200">Home</a>
+                    </li>
+                    <li><a href="/blog/" class="hover:text-white transition-colors duration-200">Blog</a></li>
+                    <li><a href="/about/" class="hover:text-white transition-colors duration-200">About Us</a></li>
+                    <li><a href="/contact/" class="hover:text-white transition-colors duration-200">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-white font-semibold text-lg mb-4">More</h4>
+                <ul class="space-y-3">
+                    <li><a href="/privacy-policy/" class="hover:text-white transition-colors duration-200">Privacy
+                            Policy</a></li>
+                    <li><a href="/terms-of-use/" class="hover:text-white transition-colors duration-200">Terms of Use</a></li>
+                    <li><a href="/sitemap.xml" class="hover:text-white transition-colors duration-200">Sitemap</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="border-t border-zinc-800 text-center py-6 text-zinc-500 text-sm">
+            <p>© <span id="currentYear">2025</span> StudentCalc.online · Built for Students</p>
+        </div>
+    </footer>
+
+
+    <script>
+        // Update copyright year
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // DOM Elements
+        const textInput = document.getElementById('textInput');
+        const statsContainer = document.getElementById('stats');
+
+        // Initial stats display
+        const initialStats = [
+            { title: 'Words', value: '0', color: 'text-blue-400', icon: '📝' },
+            { title: 'Characters', value: '0', color: 'text-green-400', icon: '🔤' },
+            { title: 'Characters (no spaces)', value: '0', color: 'text-purple-400', icon: '✂️' },
+            { title: 'Sentences', value: '0', color: 'text-yellow-400', icon: '🔠' },
+            { title: 'Paragraphs', value: '0', color: 'text-red-400', icon: '📑' },
+            { title: 'Reading Time', value: '0 min', color: 'text-cyan-400', icon: '⏱️' },
+            { title: 'Reading Time (slow)', value: '0 min', color: 'text-orange-400', icon: '🐌' },
+            { title: 'Reading Time (fast)', value: '0 min', color: 'text-emerald-400', icon: '⚡' },
+            { title: 'Longest Word', value: '-', color: 'text-pink-400', icon: '📏' },
+            { title: 'Average Word Length', value: '0', color: 'text-indigo-400', icon: '📊' }
+        ];
+
+        // Function to render stats
+        function renderStats(statsData) {
+            statsContainer.innerHTML = '';
+            statsData.forEach(stat => {
+                const statElement = document.createElement('div');
+                statElement.className = 'bg-zinc-800/50 rounded-xl p-4 text-center stat-card';
+                statElement.innerHTML = `
+                    <div class="text-2xl mb-2">${stat.icon}</div>
+                    <div class="text-2xl font-bold ${stat.color} mb-1">${stat.value}</div>
+                    <div class="text-xs text-zinc-400">${stat.title}</div>
+                `;
+                statsContainer.appendChild(statElement);
+            });
+        }
+
+        // Initial render
+        renderStats(initialStats);
+
+        // Function to count words
+        function countWords(text) {
+            if (!text.trim()) return 0;
+            return text.trim().split(/\s+/).length;
+        }
+
+        // Function to count characters
+        function countCharacters(text) {
+            return text.length;
+        }
+
+        // Function to count characters without spaces
+        function countCharactersNoSpaces(text) {
+            return text.replace(/\s/g, '').length;
+        }
+
+        // Function to count sentences
+        function countSentences(text) {
+            const sentences = text.split(/[.!?]+/).filter(s => s.trim().length > 0);
+            return sentences.length;
+        }
+
+        // Function to count paragraphs
+        function countParagraphs(text) {
+            const paragraphs = text.split(/\n+/).filter(p => p.trim().length > 0);
+            return paragraphs.length;
+        }
+
+        // Function to calculate reading time
+        function calculateReadingTime(wordCount, wordsPerMinute = 225) {
+            if (wordCount === 0) return '0 min';
+            const minutes = wordCount / wordsPerMinute;
+            if (minutes < 1) return '< 1 min';
+            return Math.ceil(minutes) + ' min';
+        }
+
+        // Function to find longest word
+        function findLongestWord(text) {
+            const words = text.match(/\b[a-zA-Z]+\b/g) || [];
+            if (words.length === 0) return '-';
+            return words.reduce((longest, current) =>
+                current.length > longest.length ? current : longest
+            );
+        }
+
+        // Function to calculate average word length
+        function calculateAverageWordLength(text) {
+            const words = text.match(/\b[a-zA-Z]+\b/g) || [];
+            if (words.length === 0) return 0;
+            const totalLength = words.reduce((sum, word) => sum + word.length, 0);
+            return (totalLength / words.length).toFixed(1);
+        }
+
+        // Function to update all stats
+        function updateStats() {
+            const text = textInput.value;
+
+            const wordCount = countWords(text);
+            const charCount = countCharacters(text);
+            const charNoSpacesCount = countCharactersNoSpaces(text);
+            const sentenceCount = countSentences(text);
+            const paragraphCount = countParagraphs(text);
+            const readingTime = calculateReadingTime(wordCount);
+            const readingTimeSlow = calculateReadingTime(wordCount, 150);
+            const readingTimeFast = calculateReadingTime(wordCount, 300);
+            const longestWord = findLongestWord(text);
+            const avgWordLength = calculateAverageWordLength(text);
+
+            const updatedStats = [
+                { title: 'Words', value: wordCount.toLocaleString(), color: 'text-blue-400', icon: '📝' },
+                { title: 'Characters', value: charCount.toLocaleString(), color: 'text-green-400', icon: '🔤' },
+                { title: 'Characters (no spaces)', value: charNoSpacesCount.toLocaleString(), color: 'text-purple-400', icon: '✂️' },
+                { title: 'Sentences', value: sentenceCount.toLocaleString(), color: 'text-yellow-400', icon: '🔠' },
+                { title: 'Paragraphs', value: paragraphCount.toLocaleString(), color: 'text-red-400', icon: '📑' },
+                { title: 'Reading Time', value: readingTime, color: 'text-cyan-400', icon: '⏱️' },
+                { title: 'Reading Time (slow)', value: readingTimeSlow, color: 'text-orange-400', icon: '🐌' },
+                { title: 'Reading Time (fast)', value: readingTimeFast, color: 'text-emerald-400', icon: '⚡' },
+                { title: 'Longest Word', value: longestWord.length > 20 ? longestWord.substring(0, 17) + '...' : longestWord, color: 'text-pink-400', icon: '📏' },
+                { title: 'Average Word Length', value: avgWordLength, color: 'text-indigo-400', icon: '📊' }
+            ];
+
+            renderStats(updatedStats);
+
+            // Add animation effect to updated stats
+            const statCards = document.querySelectorAll('.stat-card');
+            statCards.forEach(card => {
+                card.classList.add('stat-update');
+                setTimeout(() => {
+                    card.classList.remove('stat-update');
+                }, 300);
+            });
+        }
+
+        // Event listener for text input
+        textInput.addEventListener('input', updateStats);
+
+        // Function to clear text
+        function clearText() {
+            textInput.value = '';
+            updateStats();
+            textInput.focus();
+        }
+
+        // Function to paste text from clipboard
+        async function pasteText() {
+            try {
+                const text = await navigator.clipboard.readText();
+                textInput.value = text;
+                updateStats();
+            } catch (err) {
+                alert('Unable to paste from clipboard. Please paste manually.');
+            }
+        }
+
+        // Function to insert sample text
+        function insertSampleText() {
+            const sampleText = `The word counter is an essential tool for writers, students, and content creators. It helps you track the length of your text and ensure it meets specific requirements.
+
+For students, word count is crucial when writing essays, research papers, and theses. Most academic institutions have strict word count limits that must be followed precisely.
+
+Content creators and bloggers use word counters to optimize their articles for search engines. SEO experts recommend that blog posts should be at least 1000 words to rank well in search results.
+
+Social media managers need to keep their posts within character limits. Twitter allows 280 characters per tweet, while Instagram captions can be up to 2200 characters.
+
+Writers and authors use word counters to track their progress. A typical novel is between 70,000 and 100,000 words, while short stories are usually under 7,500 words.
+
+Our word counter tool provides all these statistics in real-time as you type. It counts words, characters (with and without spaces), sentences, paragraphs, and estimates reading time. Try it now by typing your own text!`;
+
+            textInput.value = sampleText;
+            updateStats();
+        }
+
+        // Function to convert to uppercase
+        function convertToUppercase() {
+            textInput.value = textInput.value.toUpperCase();
+            updateStats();
+        }
+
+        // Function to convert to lowercase
+        function convertToLowercase() {
+            textInput.value = textInput.value.toLowerCase();
+            updateStats();
+        }
+
+        // Function to remove extra spaces
+        function removeExtraSpaces() {
+            textInput.value = textInput.value.replace(/\s+/g, ' ').trim();
+            updateStats();
+        }
+
+        // Function to copy text
+        function copyText() {
+            textInput.select();
+            document.execCommand('copy');
+
+            // Show feedback
+            const copyButton = document.querySelector('button[onclick="copyText()"]');
+            const originalText = copyButton.innerHTML;
+            copyButton.innerHTML = '<span>✅</span> Copied!';
+            copyButton.classList.remove('bg-blue-600');
+            copyButton.classList.add('bg-green-600');
+
+            setTimeout(() => {
+                copyButton.innerHTML = originalText;
+                copyButton.classList.remove('bg-green-600');
+                copyButton.classList.add('bg-blue-600');
+            }, 2000);
+        }
+
+        // Initialize with sample text
+        document.addEventListener('DOMContentLoaded', function () {
+            // Initial update
+            updateStats();
+
+            // Focus on textarea
+            textInput.focus();
+
+            // Select all text on click for easy clearing
+            textInput.addEventListener('click', function () {
+                if (this.value === this.defaultValue) {
+                    this.select();
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>

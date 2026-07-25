@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About StudentCalc - Free Study Tools & Student Calculators</title>
+    <meta name="description" content="Learn about StudentCalc.online - a free online tool website providing academic calculators and study tools for students." />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="shortcut icon" href="/images/logo.png" type="image/x-icon">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+
+        body {
+            font-family: 'Space Grotesk';
+        }
+    </style>
+</head>
+
+<body>
+ <!-- Header -->
+    <header class="bg-[#FEFEFF] fixed w-full z-50 border-b border-zinc-100">
+        <nav class="flex justify-between items-center max-w-7xl mx-auto px-4 sm:px-6 py-2">
+            <a href="/" class="text-xl sm:text-2xl font-bold tracking-tight">
+                <span class="text-zinc-900">Student</span><span class="text-zinc-900">Calc</span>
+            </a>
+
+            <div class="flex items-center gap-2 sm:gap-8">
+                <a href="/about/"
+                    class="text-sm font-medium hover:scale-105 transition-transform py-2 px-1 hidden sm:block">About</a>
+                <a href="/blog/"
+                    class="text-sm font-medium hover:scale-105 transition-transform py-2 px-1 hidden sm:block">Blog</a>
+                <a href="/materials/"
+                    class="text-sm font-medium hover:scale-105 transition-transform py-2 px-1 hidden sm:block">Materials</a>
+                <a href="/contact/"
+                    class="text-sm font-medium hover:scale-105 transition-transform py-2 px-1 hidden sm:block">Contact</a>
+                <!-- Header Support Button -->
+                <a href="https://rashtriya.gumroad.com/coffee" target="_blank"
+                    class="hidden md:flex items-center gap-2 bg-black text-white px-3 py-2 rounded-full font-semibold hover:bg-gray-900 hover:scale-105 transition-all duration-300">
+
+                    ☕ Support Us
+                </a>
+
+                <!-- Hamburger (mobile only) -->
+                <button id="menuBtn" class="sm:hidden p-2 rounded-lg border border-zinc-200 hover:bg-zinc-50 transition"
+                    aria-label="Open menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor" stroke-width="1.5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Overlay -->
+    <div id="overlay" class="fixed inset-0 bg-black/35 z-[200] hidden opacity-0 transition-opacity duration-250"></div>
+
+    <!-- Sidebar -->
+    <aside id="sidebar"
+        class="fixed top-0 right-0 h-full w-60 bg-white z-[201] border-l border-zinc-100 flex flex-col p-5 translate-x-full transition-transform duration-300 ease-in-out"
+        role="dialog" aria-modal="true" aria-label="Navigation menu">
+        <div class="flex justify-between items-center mb-8">
+            <a href="/" class="text-lg font-bold tracking-tight text-zinc-900">StudentCalc</a>
+            <button id="closeBtn" class="p-1.5 rounded-lg border border-zinc-200 hover:bg-zinc-50 transition"
+                aria-label="Close menu">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor" stroke-width="1.5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+        <nav class="flex flex-col gap-1 flex-1">
+            <a href="/about/"
+                class="text-sm font-medium px-3 py-3 rounded-lg hover:bg-zinc-50 transition-colors">About</a>
+            <a href="/blog/"
+                class="text-sm font-medium px-3 py-3 rounded-lg hover:bg-zinc-50 transition-colors">Blog</a>
+            <a href="/materials/"
+                class="text-sm font-medium px-3 py-3 rounded-lg hover:bg-zinc-50 transition-colors">Materials</a>
+            <a href="/contact/" class="text-sm font-medium px-3 py-3 rounded-lg hover:bg-zinc-50 transition-colors">
+                Contact
+            </a>
+        </nav>
+        <a href="https://rashtriya.gumroad.com/coffee"
+            class="mt-auto text-sm font-medium text-center bg-black text-white py-2.5 px-5 rounded-full hover:opacity-80 transition-opacity">
+            ☕ Support Us
+
+        </a>
+    </aside>
+
+    <script>
+        const menuBtn = document.getElementById('menuBtn');
+        const closeBtn = document.getElementById('closeBtn');
+        const sidebar = document.getElementById('sidebar');
+        const overlay = document.getElementById('overlay');
+
+        function openMenu() {
+            sidebar.classList.remove('translate-x-full');
+            overlay.classList.remove('hidden');
+            requestAnimationFrame(() => overlay.classList.remove('opacity-0'));
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeMenu() {
+            sidebar.classList.add('translate-x-full');
+            overlay.classList.add('opacity-0');
+            setTimeout(() => overlay.classList.add('hidden'), 250);
+            document.body.style.overflow = '';
+        }
+
+        menuBtn.addEventListener('click', openMenu);
+        closeBtn.addEventListener('click', closeMenu);
+        overlay.addEventListener('click', closeMenu);
+        document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMenu(); });
+    </script>
+
+    <main class="mx-auto min-h-[100vh]">
+        <div class="">
+            <h2 class="pt-28 pb-20 text-3xl sm:text-5xl font-bold text-center">About StudentCalc</h2>
+
+            <div class="max-w-5xl mx-auto px-4">
+                <h3 class="text-3xl font-medium">What is StudentCalc?</h3>
+                <p class="text-2xl text-zinc-700 mt-2">StudentCalc.online is a small set of calculators built around the specific, annoying math every Indian student ends up doing at some point &mdash; working out if you have fallen below the 75% attendance cutoff, converting a CBSE CGPA to a percentage for a college application, or checking your marks percentage before results are officially out. Instead of one generic &ldquo;all tools&rdquo; dump, each calculator is built around the exact formula your board or university actually uses, with a short guide next to it explaining how the number is calculated and what to do if it is not in your favour.</p>
+            </div>
+        </div>
+
+        <div class="max-w-5xl mx-auto px-4 mt-10">
+            <h3 class="text-3xl font-medium">Why StudentCalc?</h3>
+            <p class="text-2xl text-zinc-700 mt-2">Most calculator sites are built to rank for keywords, not to actually help. I have tried to do the opposite: every formula on this site is checked against the official board or university rule before it goes live, the tools load fast with no login walls or popups, and the guides are written from having actually sat through attendance shortfalls and CGPA confusion myself &mdash; not copied from a template.</p>
+        </div>
+
+        <div class="max-w-5xl mx-auto px-4 mt-10 pb-20">
+            <h3 class="text-3xl font-medium">Who designed StudentCalc?</h3>
+           <div class="mt-3 flex gap-5 flex-col sm:flex-row">
+            <img src="/images/Rashtriya-Gaurav.png" alt="" class="h-40 w-fit rounded-2xl border-2 border-zinc-200 object-cover shrink-0">
+             <p class="text-2xl text-zinc-700 mt-2">I am Rashtriya Gaurav, a B.Tech student in India, and I designed and coded StudentCalc.online myself. It started because I got tired of manually recalculating my own attendance percentage every time a class got cancelled, and figured other students were doing the same rough math in their heads or on scraps of paper. What began as one calculator for myself turned into this site. I maintain it in my spare time alongside my degree, and I am still adding new tools based on what students actually ask me for &mdash; you can reach me directly through the <a href="/contact/" class="underline hover:text-zinc-900">contact page</a> if there is a calculator you wish existed.</p>
+           </div>
+        </div>
+
+    </main>
+
+     <footer class="bg-black w-full overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 pt-10">
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-8 mb-10">
+                <div class="col-span-2 sm:col-span-1">
+                    <div class="brand text-xl font-bold text-white mb-3">StudentCalc</div>
+                    <p class="text-sm leading-relaxed text-zinc-300">Free academic tools built for students, by
+                        students.</p>
+                </div>
+                <div>
+                    <div class="text-lg font-semibold text-white mb-3">Tools</div>
+                    <ul class="space-y-2 text-sm">
+                        
+                        <li><a href="/75-percent-attendance-calculator/" class="hover:text-white transition-colors text-zinc-300">75% Attendance Calculator</a></li>
+                        <li><a href="/marks-percentage-calculator/" class="hover:text-white transition-colors text-zinc-300">Marks Percentage Calculator</a></li>
+                        <li><a href="/cgpa-to-percentage-calculator/" class="hover:text-white transition-colors text-zinc-300">CGPA to Percentage Calculator</a></li>
+                        <li><a href="/age-calculator/" class="hover:text-white transition-colors text-zinc-300">Age Calculator</a></li>
+                        <li><a href="/easy-grade-calculator/" class="hover:text-white transition-colors text-zinc-300">Easy Grade Calculator</a></li>
+                        <li><a href="/percentile-predictor/" class="hover:text-white transition-colors text-zinc-300">JEE Percentile Predictor</a></li>
+                        <li><a href="/pomodoro-timer/" class="hover:text-white transition-colors text-zinc-300">Pomodoro Timer</a></li>
+                        <li><a href="/word-counter-online/" class="hover:text-white transition-colors text-zinc-300">Word Counter Online</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <div class="text-lg font-semibold text-white mb-3">Quick Links</div>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="/about/" class="hover:text-white transition-colors text-zinc-300">About</a></li>
+                        <li><a href="/blog/" class="hover:text-white transition-colors text-zinc-300">Blog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <div class="text-lg font-semibold text-white mb-3">Company</div>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="/contact/" class="hover:text-white transition-colors text-zinc-300">Contact</a></li>
+                        <li><a href="/privacy-policy/" class="hover:text-white transition-colors text-zinc-300">Privacy Policy</a></li>
+                        <li><a href="/terms-of-use/" class="hover:text-white transition-colors text-zinc-300">Terms of Use</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div
+                class="border-t border-zinc-800 pt-6 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-zinc-300">
+                <span>© 2026 <span class="text-white">StudentCalc</span>. All rights reserved.</span>
+                <span>Made with ❤️ in Earth</span>
+            </div>
+        </div>
+
+        <div class="relative leading-none">
+
+            <svg viewBox="0 0 1600 300" class="w-full h-auto block">
+
+                <text x="50%" y="60%" text-anchor="middle" dominant-baseline="middle" fill="white" font-size="230"
+                    font-weight="900" letter-spacing="-6" font-family="Arial, sans-serif">
+
+                    StudentCalc
+
+                </text>
+
+            </svg>
+
+        </div>
+
+    </footer>
+</body>
+
+</html>

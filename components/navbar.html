@@ -1,0 +1,95 @@
+  <!-- Header -->
+    <header class="bg-[#FEFEFF] fixed w-full z-50 border-b border-zinc-100">
+        <nav class="flex justify-between items-center max-w-7xl mx-auto px-4 sm:px-6 py-2">
+            <a href="/" class="text-xl sm:text-2xl font-bold tracking-tight">
+                <span class="text-zinc-900">Student</span><span class="text-zinc-900">Calc</span>
+            </a>
+
+            <div class="flex items-center gap-2 sm:gap-8">
+                <a href="/about/"
+                    class="text-sm font-medium hover:scale-105 transition-transform py-2 px-1 hidden sm:block">About</a>
+                <a href="/blog/"
+                    class="text-sm font-medium hover:scale-105 transition-transform py-2 px-1 hidden sm:block">Blog</a>
+                <a href="/materials/"
+                    class="text-sm font-medium hover:scale-105 transition-transform py-2 px-1 hidden sm:block">Materials</a>
+                <a href="/contact/"
+                    class="text-sm font-medium hover:scale-105 transition-transform py-2 px-1 hidden sm:block">Contact</a>
+                <!-- Header Support Button -->
+                <a href="https://rashtriya.gumroad.com/coffee" target="_blank" title="Support me by donating some money so that i can afford coffee."
+                    class="hidden md:flex items-center gap-2 bg-black text-white px-3 py-2 rounded-full font-semibold hover:bg-gray-900 hover:scale-105 transition-all duration-300">
+
+                    ☕ Support Us
+                </a>
+
+                <!-- Hamburger (mobile only) -->
+                <button id="menuBtn" class="sm:hidden p-2 rounded-lg border border-zinc-200 hover:bg-zinc-50 transition"
+                    aria-label="Open menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor" stroke-width="1.5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Overlay -->
+    <div id="overlay" class="fixed inset-0 bg-black/35 z-[200] hidden opacity-0 transition-opacity duration-250"></div>
+
+    <!-- Sidebar -->
+    <aside id="sidebar"
+        class="fixed top-0 right-0 h-full w-60 bg-white z-[201] border-l border-zinc-100 flex flex-col p-5 translate-x-full transition-transform duration-300 ease-in-out"
+        role="dialog" aria-modal="true" aria-label="Navigation menu">
+        <div class="flex justify-between items-center mb-8">
+            <a href="/" class="text-lg font-bold tracking-tight text-zinc-900">StudentCalc</a>
+            <button id="closeBtn" class="p-1.5 rounded-lg border border-zinc-200 hover:bg-zinc-50 transition"
+                aria-label="Close menu">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor" stroke-width="1.5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+        <nav class="flex flex-col gap-1 flex-1">
+            <a href="/about/"
+                class="text-sm font-medium px-3 py-3 rounded-lg hover:bg-zinc-50 transition-colors">About</a>
+            <a href="/blog/"
+                class="text-sm font-medium px-3 py-3 rounded-lg hover:bg-zinc-50 transition-colors">Blog</a>
+            <a href="/materials/"
+                class="text-sm font-medium px-3 py-3 rounded-lg hover:bg-zinc-50 transition-colors">Materials</a>
+            <a href="/contact/" class="text-sm font-medium px-3 py-3 rounded-lg hover:bg-zinc-50 transition-colors">
+                Contact
+            </a>
+        </nav>
+        <a href="https://rashtriya.gumroad.com/coffee"
+            class="mt-auto text-sm font-medium text-center bg-black text-white py-2.5 px-5 rounded-full hover:opacity-80 transition-opacity">
+            ☕ Support Us
+
+        </a>
+    </aside>
+
+    <script>
+        const menuBtn = document.getElementById('menuBtn');
+        const closeBtn = document.getElementById('closeBtn');
+        const sidebar = document.getElementById('sidebar');
+        const overlay = document.getElementById('overlay');
+
+        function openMenu() {
+            sidebar.classList.remove('translate-x-full');
+            overlay.classList.remove('hidden');
+            requestAnimationFrame(() => overlay.classList.remove('opacity-0'));
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeMenu() {
+            sidebar.classList.add('translate-x-full');
+            overlay.classList.add('opacity-0');
+            setTimeout(() => overlay.classList.add('hidden'), 250);
+            document.body.style.overflow = '';
+        }
+
+        menuBtn.addEventListener('click', openMenu);
+        closeBtn.addEventListener('click', closeMenu);
+        overlay.addEventListener('click', closeMenu);
+        document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMenu(); });
+    </script>

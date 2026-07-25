@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CGPA to Percentage Calculator - Convert CGPA to Percentage Online</title>
+  <meta name="description" content="Use our free CGPA to Percentage Calculator to convert your CGPA into percentage instantly. Accurate formula for CBSE, universities, and colleges. Easy to use, no login required." />
+  <link rel="canonical" href="https://www.studentcalc.online/cgpa-to-percentage-calculator/" />
+    <link rel="shortcut icon" href="/images/logo.png" type="image/x-icon">
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="CGPA to Percentage Calculator - Convert CGPA Instantly" />
+  <meta property="og:description" content="Free CGPA to percentage converter. Convert your CGPA into percentage accurately for CBSE, universities, and college applications." />
+  <meta property="og:url" content="https://www.studentcalc.online/cgpa-to-percentage-calculator/" />
+  <meta property="og:site_name" content="StudentCalc" />
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://www.studentcalc.online/cgpa-to-percentage-calculator/#webpage","url":"https://www.studentcalc.online/cgpa-to-percentage-calculator/","name":"CGPA to Percentage Calculator","isPartOf":{"@id":"https://www.studentcalc.online/#website"},"description":"Free CGPA to percentage calculator for students to convert CGPA into percentage accurately for CBSE, universities and colleges.","breadcrumb":{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.studentcalc.online/"},{"@type":"ListItem","position":2,"name":"CGPA to Percentage Calculator","item":"https://www.studentcalc.online/cgpa-to-percentage-calculator/"}]},"inLanguage":"en"},{"@type":"SoftwareApplication","name":"CGPA to Percentage Calculator","operatingSystem":"Web","applicationCategory":"EducationalApplication","url":"https://www.studentcalc.online/cgpa-to-percentage-calculator/","description":"Convert CGPA to percentage instantly with accurate formula.","offers":{"@type":"Offer","price":"0","priceCurrency":"INR"}}]}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How to convert CGPA to percentage?","acceptedAnswer":{"@type":"Answer","text":"Multiply your CGPA by 9.5. Percentage = CGPA × 9.5. This is the standard CBSE formula."}},{"@type":"Question","name":"What is the formula for CGPA to percentage?","acceptedAnswer":{"@type":"Answer","text":"The standard CBSE formula is: Percentage = CGPA × 9.5. Some universities use CGPA × 10 or other multipliers."}},{"@type":"Question","name":"Is CGPA to percentage calculator free?","acceptedAnswer":{"@type":"Answer","text":"Yes, completely free with no login or sign-up required."}},{"@type":"Question","name":"What is a good CGPA?","acceptedAnswer":{"@type":"Answer","text":"A CGPA above 8.0 (76% and above) is considered good. Above 9.0 (85.5% and above) is excellent."}},{"@type":"Question","name":"How to calculate percentage from CGPA in CBSE?","acceptedAnswer":{"@type":"Answer","text":"CBSE uses the formula: Percentage = CGPA × 9.5. For example, if your CGPA is 8.4, your percentage is 8.4 × 9.5 = 79.8%."}}]}
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+    body { font-family: 'Space Grotesk'; }
+
+    input[type=number]::-webkit-inner-spin-button,
+    input[type=number]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
+    input[type=number] { -moz-appearance: textfield; }
+    input:focus { outline: none; border-color: #09090b !important; box-shadow: 0 0 0 3px rgba(9,9,11,0.06); }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes countUp {
+      from { opacity: 0; transform: scale(0.85); }
+      to   { opacity: 1; transform: scale(1); }
+    }
+    @keyframes barGrow {
+      from { width: 0%; }
+    }
+    .fade-up   { animation: fadeUp 0.4s ease forwards; }
+    .count-up  { animation: countUp 0.5s cubic-bezier(.34,1.56,.64,1) forwards; }
+    .bar-grow  { animation: barGrow 0.8s cubic-bezier(.4,0,.2,1) forwards; }
+    .hidden-anim { opacity: 0; }
+  </style>
+</head>
+
+<body class="bg-white">
+ <!-- Header -->
+    <header class="bg-[#FEFEFF] fixed w-full z-50 border-b border-zinc-100">
+        <nav class="flex justify-between items-center max-w-7xl mx-auto px-4 sm:px-6 py-2">
+            <a href="/" class="text-xl sm:text-2xl font-bold tracking-tight">
+                <span class="text-zinc-900">Student</span><span class="text-zinc-900">Calc</span>
+            </a>
+
+            <div class="flex items-center gap-2 sm:gap-8">
+                <a href="/about/"
+                    class="text-sm font-medium hover:scale-105 transition-transform py-2 px-1 hidden sm:block">About</a>
+                <a href="/blog/"
+                    class="text-sm font-medium hover:scale-105 transition-transform py-2 px-1 hidden sm:block">Blog</a>
+                <a href="/materials/"
+                    class="text-sm font-medium hover:scale-105 transition-transform py-2 px-1 hidden sm:block">Materials</a>
+                <a href="/contact/"
+                    class="text-sm font-medium hover:scale-105 transition-transform py-2 px-1 hidden sm:block">Contact</a>
+                <!-- Header Support Button -->
+                <a href="https://rashtriya.gumroad.com/coffee" target="_blank"
+                    class="hidden md:flex items-center gap-2 bg-black text-white px-3 py-2 rounded-full font-semibold hover:bg-gray-900 hover:scale-105 transition-all duration-300">
+
+                    ☕ Support Us
+                </a>
+
+                <!-- Hamburger (mobile only) -->
+                <button id="menuBtn" class="sm:hidden p-2 rounded-lg border border-zinc-200 hover:bg-zinc-50 transition"
+                    aria-label="Open menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor" stroke-width="1.5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Overlay -->
+    <div id="overlay" class="fixed inset-0 bg-black/35 z-[200] hidden opacity-0 transition-opacity duration-250"></div>
+
+    <!-- Sidebar -->
+    <aside id="sidebar"
+        class="fixed top-0 right-0 h-full w-60 bg-white z-[201] border-l border-zinc-100 flex flex-col p-5 translate-x-full transition-transform duration-300 ease-in-out"
+        role="dialog" aria-modal="true" aria-label="Navigation menu">
+        <div class="flex justify-between items-center mb-8">
+            <a href="/" class="text-lg font-bold tracking-tight text-zinc-900">StudentCalc</a>
+            <button id="closeBtn" class="p-1.5 rounded-lg border border-zinc-200 hover:bg-zinc-50 transition"
+                aria-label="Close menu">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor" stroke-width="1.5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+        <nav class="flex flex-col gap-1 flex-1">
+            <a href="/about/"
+                class="text-sm font-medium px-3 py-3 rounded-lg hover:bg-zinc-50 transition-colors">About</a>
+            <a href="/blog/"
+                class="text-sm font-medium px-3 py-3 rounded-lg hover:bg-zinc-50 transition-colors">Blog</a>
+            <a href="/materials/"
+                class="text-sm font-medium px-3 py-3 rounded-lg hover:bg-zinc-50 transition-colors">Materials</a>
+            <a href="/contact/" class="text-sm font-medium px-3 py-3 rounded-lg hover:bg-zinc-50 transition-colors">
+                Contact
+            </a>
+        </nav>
+        <a href="https://rashtriya.gumroad.com/coffee"
+            class="mt-auto text-sm font-medium text-center bg-black text-white py-2.5 px-5 rounded-full hover:opacity-80 transition-opacity">
+            ☕ Support Us
+
+        </a>
+    </aside>
+
+    <script>
+        const menuBtn = document.getElementById('menuBtn');
+        const closeBtn = document.getElementById('closeBtn');
+        const sidebar = document.getElementById('sidebar');
+        const overlay = document.getElementById('overlay');
+
+        function openMenu() {
+            sidebar.classList.remove('translate-x-full');
+            overlay.classList.remove('hidden');
+            requestAnimationFrame(() => overlay.classList.remove('opacity-0'));
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeMenu() {
+            sidebar.classList.add('translate-x-full');
+            overlay.classList.add('opacity-0');
+            setTimeout(() => overlay.classList.add('hidden'), 250);
+            document.body.style.overflow = '';
+        }
+
+        menuBtn.addEventListener('click', openMenu);
+        closeBtn.addEventListener('click', closeMenu);
+        overlay.addEventListener('click', closeMenu);
+        document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMenu(); });
+    </script>
+
+  <!-- Hero with gradient -->
+  <section class="bg-gradient-to-b from-green-50/60 via-white to-white pt-28 pb-16 px-4 text-center border-b border-zinc-100">
+    <nav class="flex items-center justify-center gap-2 text-xs text-zinc-400 mb-6">
+      <a href="/" class="hover:text-zinc-600 transition-colors">Home</a>
+      <span>›</span>
+      <span class="text-zinc-600">CGPA to Percentage Calculator</span>
+    </nav>
+    <div class="inline-flex items-center gap-2 px-3 py-1 bg-green-100/70 border border-green-300 rounded-full text-xs font-medium text-green-700 mb-5">
+      <span class="w-1.5 h-1.5 rounded-full bg-green-500 inline-block"></span>
+      Free · No login required · Instant results
+    </div>
+    <h1 class="text-4xl sm:text-6xl font-semibold tracking-tight text-zinc-900 leading-tight max-w-3xl mx-auto">
+      CGPA to Percentage<br class="hidden sm:block"/> Calculator
+    </h1>
+    <p class="text-zinc-500 mt-5 text-base sm:text-lg max-w-lg mx-auto leading-relaxed">
+      Convert your CGPA into percentage instantly. Works for CBSE, universities, and all college grading systems.
+    </p>
+
+    <!-- Trust stats -->
+    <div class="flex items-center justify-center gap-6 sm:gap-10 mt-8 flex-wrap">
+      <div class="text-center">
+        <p class="text-2xl font-bold text-zinc-900">50K+</p>
+        <p class="text-xs text-zinc-400 mt-0.5">Conversions done</p>
+      </div>
+      <div class="w-px h-8 bg-zinc-200 hidden sm:block"></div>
+      <div class="text-center">
+        <p class="text-2xl font-bold text-zinc-900">100%</p>
+        <p class="text-xs text-zinc-400 mt-0.5">Free forever</p>
+      </div>
+      <div class="w-px h-8 bg-zinc-200 hidden sm:block"></div>
+      <div class="text-center">
+        <p class="text-2xl font-bold text-zinc-900">CBSE</p>
+        <p class="text-xs text-zinc-400 mt-0.5">Standard formula</p>
+      </div>
+    </div>
+  </section>
+
+  <main class="mx-auto max-w-4xl px-4 sm:px-6 py-12">
+
+    <!-- Calculator Card -->
+    <section class="border-2 border-zinc-900 rounded-2xl overflow-hidden mb-8 shadow-[0_8px_40px_-8px_rgba(0,0,0,0.15)]">
+
+      <!-- Card header -->
+      <div class="bg-zinc-900 px-6 sm:px-8 py-5 flex items-center gap-3">
+        <div class="w-9 h-9 rounded-xl bg-green-400/20 flex items-center justify-center shrink-0">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 text-green-400">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3v11.25A2.25 2.25 0 0 0 6 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0 1 18 16.5h-2.25m-7.5 0h7.5m-7.5 0-1 3m8.5-3 1 3m.5-12H4.5m2.25 0h10.5" />
+          </svg>
+        </div>
+        <div>
+          <h2 class="text-white font-semibold text-base">Convert CGPA to Percentage</h2>
+          <p class="text-zinc-400 text-xs mt-0.5">Enter your CGPA to get percentage</p>
+        </div>
+        <span class="ml-auto text-xs font-medium bg-green-400/20 text-green-400 px-2.5 py-1 rounded-full border border-green-400/30">CBSE</span>
+      </div>
+
+      <!-- Card body -->
+      <div class="p-6 sm:p-8">
+        <div class="grid grid-cols-1 gap-4 mb-5">
+          <div class="flex flex-col gap-1.5">
+            <label for="cgpa" class="text-sm font-medium text-zinc-700">Enter Your CGPA</label>
+            <input id="cgpa" type="number" placeholder="e.g. 8.4" step="0.01" min="0" max="10"
+              class="w-full border-2 border-zinc-200 rounded-xl px-4 py-3 text-base font-medium text-zinc-900 placeholder-zinc-300 transition-all duration-150 bg-zinc-50/50"/>
+          </div>
+        </div>
+
+        <!-- Multiplier Selection -->
+        <div class="mb-5">
+          <label class="text-sm font-medium text-zinc-700 mb-2 block">Select Conversion Formula</label>
+          <div class="grid grid-cols-3 gap-2">
+            <button id="btn-cbse" onclick="setMultiplier(9.5, 'CBSE')" class="multiplier-btn py-2 px-3 rounded-lg text-sm font-medium transition-all border-2 border-zinc-200 bg-white text-zinc-700 hover:border-green-500 hover:bg-green-50">
+              CBSE (×9.5)
+            </button>
+            <button id="btn-mumbai" onclick="setMultiplier(7.5, 'Mumbai University')" class="multiplier-btn py-2 px-3 rounded-lg text-sm font-medium transition-all border-2 border-zinc-200 bg-white text-zinc-700 hover:border-green-500 hover:bg-green-50">
+              Mumbai (×7.5)
+            </button>
+            <button id="btn-standard" onclick="setMultiplier(10, 'Standard')" class="multiplier-btn py-2 px-3 rounded-lg text-sm font-medium transition-all border-2 border-zinc-200 bg-white text-zinc-700 hover:border-green-500 hover:bg-green-50">
+              Standard (×10)
+            </button>
+          </div>
+          <p id="multiplier-note" class="text-xs text-zinc-400 mt-2">Currently using: <strong class="text-green-600">CBSE Formula (×9.5)</strong></p>
+        </div>
+
+        <button onclick="calculatePercentage()"
+          class="w-full bg-zinc-900 text-white text-sm font-semibold py-3.5 rounded-xl hover:bg-zinc-800 active:scale-[0.98] transition-all duration-150 tracking-wide">
+          Convert to Percentage →
+        </button>
+
+        <!-- Result panel -->
+        <div id="result" class="hidden-anim hidden mt-6">
+
+          <!-- Big percentage display -->
+          <div class="bg-zinc-50 border-2 border-zinc-200 rounded-xl p-6 text-center mb-4">
+            <p class="text-xs font-medium text-zinc-400 uppercase tracking-widest mb-2">Your Percentage</p>
+            <p id="result-percent" class="text-6xl sm:text-7xl font-bold tracking-tight text-zinc-900 count-up"></p>
+            <p id="result-sub" class="text-sm text-zinc-500 mt-2"></p>
+
+            <!-- Progress bar -->
+            <div class="mt-5 bg-zinc-200 rounded-full h-2.5 overflow-hidden">
+              <div id="result-bar" class="h-full rounded-full bar-grow" style="width:0%"></div>
+            </div>
+            <div class="flex justify-between text-xs text-zinc-400 mt-1.5">
+              <span>0%</span><span>33% Pass</span><span>100%</span>
+            </div>
+          </div>
+
+          <!-- Stats grid -->
+          <div class="grid grid-cols-3 gap-3 mb-4">
+            <div class="border-2 border-zinc-200 rounded-xl p-3 text-center">
+              <p class="text-xs text-zinc-400 mb-1">CGPA</p>
+              <p id="result-cgpa" class="text-sm font-bold text-zinc-900"></p>
+            </div>
+            <div class="border-2 border-zinc-200 rounded-xl p-3 text-center">
+              <p class="text-xs text-zinc-400 mb-1">Grade</p>
+              <p id="result-grade" class="text-sm font-bold"></p>
+            </div>
+            <div class="border-2 border-zinc-200 rounded-xl p-3 text-center">
+              <p class="text-xs text-zinc-400 mb-1">Status</p>
+              <p id="result-status" class="text-sm font-bold"></p>
+            </div>
+          </div>
+
+          <!-- Formula -->
+          <div class="bg-zinc-900 rounded-xl px-5 py-3.5 flex items-center gap-3 mb-3">
+            <span class="text-zinc-500 text-xs shrink-0">Formula</span>
+            <p id="result-formula" class="text-sm font-mono text-green-400 ml-auto text-right"></p>
+          </div>
+
+          <!-- Tip -->
+          <div id="result-tip" class="rounded-xl px-4 py-3 text-sm font-medium"></div>
+        </div>
+
+        <!-- Example hint -->
+        <div class="mt-5 pt-5 border-t border-zinc-100 flex items-center gap-2 flex-wrap">
+          <span class="text-xs text-zinc-400">Examples:</span>
+          <span class="text-xs text-zinc-600 font-medium">8.4 CGPA → <strong class="text-zinc-900">79.8%</strong> (CBSE)</span>
+          <span class="text-xs text-zinc-400 mx-1">|</span>
+          <span class="text-xs text-zinc-600 font-medium">9.2 CGPA → <strong class="text-zinc-900">87.4%</strong> (CBSE)</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Content -->
+    <div class="space-y-4">
+
+      <!-- What is / formula — 2 col on desktop -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <section class="border-2 border-zinc-200 rounded-xl p-6">
+          <h2 class="text-lg font-semibold text-zinc-900 mb-3">What is CGPA?</h2>
+          <p class="text-zinc-600 text-sm leading-relaxed">CGPA (Cumulative Grade Point Average) is the average of grade points earned across all subjects. It's used by CBSE and many universities to represent overall academic performance on a 10-point scale.</p>
+        </section>
+        <section class="border-2 border-zinc-200 rounded-xl p-6">
+          <h2 class="text-lg font-semibold text-zinc-900 mb-3">The Conversion Formula</h2>
+          <div class="bg-zinc-50 border border-zinc-200 rounded-lg px-4 py-3 text-center mb-3">
+            <p class="text-sm font-semibold font-mono text-zinc-900">Percentage = CGPA × 9.5</p>
+          </div>
+          <p class="text-zinc-600 text-sm leading-relaxed">This is the standard CBSE formula. Some universities use ×10 or other multipliers. Our calculator supports multiple formats.</p>
+        </section>
+      </div>
+
+      <!-- Worked example -->
+      <section class="border-2 border-zinc-200 rounded-xl p-6 sm:p-8">
+        <h2 class="text-xl font-semibold text-zinc-900 mb-5">Worked example — CBSE CGPA to Percentage</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div class="space-y-2.5">
+            <div class="flex justify-between items-center py-2 border-b border-zinc-100">
+              <span class="text-sm text-zinc-500">Subject 1</span>
+              <div class="flex items-center gap-3">
+                <div class="w-20 h-1.5 bg-zinc-100 rounded-full overflow-hidden"><div class="h-full bg-green-400 rounded-full" style="width:88%"></div></div>
+                <span class="text-sm font-medium text-zinc-900 w-12 text-right">8.8</span>
+              </div>
+            </div>
+            <div class="flex justify-between items-center py-2 border-b border-zinc-100">
+              <span class="text-sm text-zinc-500">Subject 2</span>
+              <div class="flex items-center gap-3">
+                <div class="w-20 h-1.5 bg-zinc-100 rounded-full overflow-hidden"><div class="h-full bg-green-400 rounded-full" style="width:92%"></div></div>
+                <span class="text-sm font-medium text-zinc-900 w-12 text-right">9.2</span>
+              </div>
+            </div>
+            <div class="flex justify-between items-center py-2 border-b border-zinc-100">
+              <span class="text-sm text-zinc-500">Subject 3</span>
+              <div class="flex items-center gap-3">
+                <div class="w-20 h-1.5 bg-zinc-100 rounded-full overflow-hidden"><div class="h-full bg-green-400 rounded-full" style="width:85%"></div></div>
+                <span class="text-sm font-medium text-zinc-900 w-12 text-right">8.5</span>
+              </div>
+            </div>
+            <div class="flex justify-between items-center py-2 border-b border-zinc-100">
+              <span class="text-sm text-zinc-500">Subject 4</span>
+              <div class="flex items-center gap-3">
+                <div class="w-20 h-1.5 bg-zinc-100 rounded-full overflow-hidden"><div class="h-full bg-green-400 rounded-full" style="width:90%"></div></div>
+                <span class="text-sm font-medium text-zinc-900 w-12 text-right">9.0</span>
+              </div>
+            </div>
+            <div class="flex justify-between items-center py-2">
+              <span class="text-sm text-zinc-500">Subject 5</span>
+              <div class="flex items-center gap-3">
+                <div class="w-20 h-1.5 bg-zinc-100 rounded-full overflow-hidden"><div class="h-full bg-green-400 rounded-full" style="width:83%"></div></div>
+                <span class="text-sm font-medium text-zinc-900 w-12 text-right">8.3</span>
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-col justify-center items-center bg-zinc-900 rounded-xl p-6 text-center">
+            <p class="text-zinc-400 text-sm mb-2">CGPA → Percentage</p>
+            <p class="text-6xl font-bold text-white mb-1">8.76</p>
+            <p class="text-green-400 text-2xl font-bold">↓</p>
+            <p class="text-5xl font-bold text-white mb-1">83.22%</p>
+            <p class="text-zinc-500 text-xs mb-4">(8.76 × 9.5)</p>
+            <div class="bg-green-400/20 border border-green-400/30 rounded-lg px-3 py-1.5">
+              <span class="text-green-400 text-xs font-medium">A · First Division</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- University-specific sections -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <section class="border-2 border-zinc-200 rounded-xl p-6">
+          <span class="text-xs font-semibold bg-green-100 text-green-700 px-2.5 py-0.5 rounded-full">CBSE</span>
+          <h2 class="text-lg font-semibold text-zinc-900 mt-3 mb-2">CBSE CGPA to Percentage</h2>
+          <p class="text-zinc-600 text-sm leading-relaxed">CBSE uses the formula: <strong>Percentage = CGPA × 9.5</strong>. This is the official formula used for Class 10 and Class 12 results.</p>
+          <div class="mt-3 bg-green-50 rounded-lg p-3">
+            <p class="text-xs text-green-800">Example: 8.8 CGPA × 9.5 = 83.6%</p>
+          </div>
+        </section>
+        <section class="border-2 border-zinc-200 rounded-xl p-6">
+          <span class="text-xs font-semibold bg-blue-100 text-blue-700 px-2.5 py-0.5 rounded-full">University</span>
+          <h2 class="text-lg font-semibold text-zinc-900 mt-3 mb-2">University CGPA to Percentage</h2>
+          <p class="text-zinc-600 text-sm leading-relaxed">Many universities use different multipliers (×7.5, ×8.8, ×10). Mumbai University uses ×7.5, while Anna University uses ×8.8.</p>
+        </section>
+        <section class="border-2 border-zinc-200 rounded-xl p-6">
+          <span class="text-xs font-semibold bg-purple-100 text-purple-700 px-2.5 py-0.5 rounded-full">GTU</span>
+          <h2 class="text-lg font-semibold text-zinc-900 mt-3 mb-2">GTU CGPA to Percentage</h2>
+          <p class="text-zinc-600 text-sm leading-relaxed">Gujarat Technological University uses: <strong>Percentage = (CGPA - 0.5) × 10</strong>. Our calculator can handle custom formulas.</p>
+        </section>
+        <section class="border-2 border-zinc-200 rounded-xl p-6">
+          <span class="text-xs font-semibold bg-orange-100 text-orange-700 px-2.5 py-0.5 rounded-full">VTU</span>
+          <h2 class="text-lg font-semibold text-zinc-900 mt-3 mb-2">VTU CGPA to Percentage</h2>
+          <p class="text-zinc-600 text-sm leading-relaxed">Visvesvaraya Technological University formula: <strong>Percentage = (CGPA - 0.75) × 10</strong>.</p>
+        </section>
+      </div>
+
+      <!-- CGPA to Percentage Table -->
+      <section class="border-2 border-zinc-200 rounded-xl p-6">
+        <h2 class="text-lg font-semibold text-zinc-900 mb-4">Quick Reference: CGPA to Percentage Chart</h2>
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm">
+            <thead class="bg-zinc-100">
+              <tr>
+                <th class="px-4 py-3 text-left text-zinc-700 font-semibold">CGPA</th>
+                <th class="px-4 py-3 text-left text-zinc-700 font-semibold">Percentage (×9.5)</th>
+                <th class="px-4 py-3 text-left text-zinc-700 font-semibold">Grade</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-zinc-100">
+              <tr class="hover:bg-zinc-50 transition-colors"><td class="px-4 py-3 text-zinc-800 font-medium">10.0</td><td class="px-4 py-3 text-zinc-600">95.0%</td><td class="px-4 py-3 text-green-600 font-medium">A+</td></tr>
+              <tr class="hover:bg-zinc-50 transition-colors"><td class="px-4 py-3 text-zinc-800 font-medium">9.5</td><td class="px-4 py-3 text-zinc-600">90.25%</td><td class="px-4 py-3 text-green-600 font-medium">A+</td></tr>
+              <tr class="hover:bg-zinc-50 transition-colors"><td class="px-4 py-3 text-zinc-800 font-medium">9.0</td><td class="px-4 py-3 text-zinc-600">85.5%</td><td class="px-4 py-3 text-green-600 font-medium">A</td></tr>
+              <tr class="hover:bg-zinc-50 transition-colors"><td class="px-4 py-3 text-zinc-800 font-medium">8.5</td><td class="px-4 py-3 text-zinc-600">80.75%</td><td class="px-4 py-3 text-blue-600 font-medium">A</td></tr>
+              <tr class="hover:bg-zinc-50 transition-colors"><td class="px-4 py-3 text-zinc-800 font-medium">8.0</td><td class="px-4 py-3 text-zinc-600">76.0%</td><td class="px-4 py-3 text-blue-600 font-medium">B+</td></tr>
+              <tr class="hover:bg-zinc-50 transition-colors"><td class="px-4 py-3 text-zinc-800 font-medium">7.5</td><td class="px-4 py-3 text-zinc-600">71.25%</td><td class="px-4 py-3 text-blue-600 font-medium">B+</td></tr>
+              <tr class="hover:bg-zinc-50 transition-colors"><td class="px-4 py-3 text-zinc-800 font-medium">7.0</td><td class="px-4 py-3 text-zinc-600">66.5%</td><td class="px-4 py-3 text-yellow-600 font-medium">B</td></tr>
+              <tr class="hover:bg-zinc-50 transition-colors"><td class="px-4 py-3 text-zinc-800 font-medium">6.5</td><td class="px-4 py-3 text-zinc-600">61.75%</td><td class="px-4 py-3 text-yellow-600 font-medium">B</td></tr>
+              <tr class="hover:bg-zinc-50 transition-colors"><td class="px-4 py-3 text-zinc-800 font-medium">6.0</td><td class="px-4 py-3 text-zinc-600">57.0%</td><td class="px-4 py-3 text-orange-600 font-medium">C</td></tr>
+              <tr class="hover:bg-zinc-50 transition-colors"><td class="px-4 py-3 text-zinc-800 font-medium">5.5</td><td class="px-4 py-3 text-zinc-600">52.25%</td><td class="px-4 py-3 text-orange-600 font-medium">C</td></tr>
+              <tr class="hover:bg-zinc-50 transition-colors"><td class="px-4 py-3 text-zinc-800 font-medium">5.0</td><td class="px-4 py-3 text-zinc-600">47.5%</td><td class="px-4 py-3 text-red-600 font-medium">D</td></tr>
+              <tr class="hover:bg-zinc-50 transition-colors"><td class="px-4 py-3 text-zinc-800 font-medium">4.0</td><td class="px-4 py-3 text-zinc-600">38.0%</td><td class="px-4 py-3 text-red-600 font-medium">F</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="text-xs text-zinc-400 mt-3">* Based on CBSE standard (×9.5) conversion formula. Different universities may use different multipliers.</p>
+      </section>
+
+      <!-- Why use StudentCalc -->
+      <section class="border-2 border-zinc-900 rounded-xl p-6 sm:p-8 bg-zinc-900 text-white">
+        <h2 class="text-xl font-semibold mb-6">Why Use StudentCalc for CGPA Conversion?</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div class="flex items-start gap-3">
+            <div class="w-8 h-8 rounded-lg bg-green-400/20 flex items-center justify-center shrink-0 mt-0.5">
+              <span class="text-green-400 text-sm">✓</span>
+            </div>
+            <div>
+              <p class="text-sm font-medium text-white">Multiple University Formulas</p>
+              <p class="text-xs text-zinc-400 mt-0.5 leading-relaxed">Supports CBSE, Mumbai University, and standard ×10 formula.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <div class="w-8 h-8 rounded-lg bg-green-400/20 flex items-center justify-center shrink-0 mt-0.5">
+              <span class="text-green-400 text-sm">✓</span>
+            </div>
+            <div>
+              <p class="text-sm font-medium text-white">Official CBSE Formula</p>
+              <p class="text-xs text-zinc-400 mt-0.5 leading-relaxed">Uses the exact ×9.5 multiplier used by CBSE.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <div class="w-8 h-8 rounded-lg bg-green-400/20 flex items-center justify-center shrink-0 mt-0.5">
+              <span class="text-green-400 text-sm">✓</span>
+            </div>
+            <div>
+              <p class="text-sm font-medium text-white">Instant Results</p>
+              <p class="text-xs text-zinc-400 mt-0.5 leading-relaxed">No waiting, no loading — convert instantly.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <div class="w-8 h-8 rounded-lg bg-green-400/20 flex items-center justify-center shrink-0 mt-0.5">
+              <span class="text-green-400 text-sm">✓</span>
+            </div>
+            <div>
+              <p class="text-sm font-medium text-white">Free Forever</p>
+              <p class="text-xs text-zinc-400 mt-0.5 leading-relaxed">No account, no payment, no hidden limits.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="border-2 border-zinc-200 rounded-xl p-6 sm:p-8">
+        <h2 class="text-xl font-semibold text-zinc-900 mb-6">Frequently Asked Questions</h2>
+        <div class="space-y-0">
+          <details class="group border-b border-zinc-100 py-4">
+            <summary class="text-sm font-semibold text-zinc-900 cursor-pointer flex justify-between items-center list-none">
+              How to convert CGPA to percentage?
+              <span class="text-zinc-400 group-open:rotate-180 transition-transform duration-200 shrink-0 ml-3">↓</span>
+            </summary>
+            <p class="text-zinc-600 text-sm leading-relaxed mt-3">Multiply your CGPA by 9.5. Percentage = CGPA × 9.5. This is the standard CBSE formula. For example, 8.4 CGPA = 8.4 × 9.5 = 79.8%.</p>
+          </details>
+          <details class="group border-b border-zinc-100 py-4">
+            <summary class="text-sm font-semibold text-zinc-900 cursor-pointer flex justify-between items-center list-none">
+              What is the formula for CGPA to percentage in CBSE?
+              <span class="text-zinc-400 group-open:rotate-180 transition-transform duration-200 shrink-0 ml-3">↓</span>
+            </summary>
+            <p class="text-zinc-600 text-sm leading-relaxed mt-3">CBSE uses: <strong>Percentage = CGPA × 9.5</strong>. This formula was derived by CBSE after analyzing the previous five years' results.</p>
+          </details>
+          <details class="group border-b border-zinc-100 py-4">
+            <summary class="text-sm font-semibold text-zinc-900 cursor-pointer flex justify-between items-center list-none">
+              Is CGPA to percentage calculator accurate?
+              <span class="text-zinc-400 group-open:rotate-180 transition-transform duration-200 shrink-0 ml-3">↓</span>
+            </summary>
+            <p class="text-zinc-600 text-sm leading-relaxed mt-3">Yes — it uses the standard academic formula accepted by CBSE and most universities. All calculations happen in your browser for accuracy.</p>
+          </details>
+          <details class="group border-b border-zinc-100 py-4">
+            <summary class="text-sm font-semibold text-zinc-900 cursor-pointer flex justify-between items-center list-none">
+              What is a good CGPA?
+              <span class="text-zinc-400 group-open:rotate-180 transition-transform duration-200 shrink-0 ml-3">↓</span>
+            </summary>
+            <p class="text-zinc-600 text-sm leading-relaxed mt-3">A CGPA above 8.0 (76% and above) is considered good. Above 9.0 (85.5% and above) is excellent and often qualifies for academic awards.</p>
+          </details>
+          <details class="group py-4">
+            <summary class="text-sm font-semibold text-zinc-900 cursor-pointer flex justify-between items-center list-none">
+              How to calculate percentage from CGPA for different universities?
+              <span class="text-zinc-400 group-open:rotate-180 transition-transform duration-200 shrink-0 ml-3">↓</span>
+            </summary>
+            <p class="text-zinc-600 text-sm leading-relaxed mt-3">Different universities use different multipliers. Use our calculator's formula selector to choose between CBSE (×9.5), Mumbai University (×7.5), or Standard (×10).</p>
+          </details>
+        </div>
+      </section>
+
+      <!-- Related tools -->
+      <section class="border-2 border-zinc-200 rounded-xl p-6 sm:p-8">
+        <h2 class="text-xl font-semibold text-zinc-900 mb-5">More student tools</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <a href="/marks-percentage-calculator/" class="group flex items-center gap-4 p-4 border-2 border-zinc-200 rounded-xl hover:border-zinc-400 hover:scale-[1.02] transition-all duration-200">
+            <div class="w-10 h-10 rounded-xl bg-teal-100 flex items-center justify-center text-teal-700 shrink-0 text-sm font-bold">%</div>
+            <div>
+              <p class="text-sm font-semibold text-zinc-900">Marks Percentage Calculator</p>
+              <p class="text-xs text-zinc-500 mt-0.5">Calculate your exam percentage</p>
+            </div>
+            <span class="ml-auto text-zinc-300 group-hover:text-zinc-600 transition-colors">→</span>
+          </a>
+          <a href="/75-percent-attendance-calculator/" class="group flex items-center gap-4 p-4 border-2 border-zinc-200 rounded-xl hover:border-zinc-400 hover:scale-[1.02] transition-all duration-200">
+            <div class="w-10 h-10 rounded-xl bg-blue-100 flex items-center justify-center text-blue-700 shrink-0">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5"><path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5"/></svg>
+            </div>
+            <div>
+              <p class="text-sm font-semibold text-zinc-900">75% Attendance Calculator</p>
+              <p class="text-xs text-zinc-500 mt-0.5">Check your attendance eligibility</p>
+            </div>
+            <span class="ml-auto text-zinc-300 group-hover:text-zinc-600 transition-colors">→</span>
+          </a>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-black w-full overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 pt-10">
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-8 mb-10">
+        <div class="col-span-2 sm:col-span-1">
+          <div class="text-xl font-bold text-white mb-3">StudentCalc</div>
+          <p class="text-sm leading-relaxed text-zinc-300">Free academic tools built for students, by students.</p>
+        </div>
+        <div>
+          <div class="text-lg font-semibold text-white mb-3">Tools</div>
+          <ul class="space-y-2 text-sm">
+            <li><a href="/marks-percentage-calculator/" class="hover:text-white transition-colors text-zinc-300">Marks Percentage Calculator</a></li>
+                        <li><a href="/cgpa-to-percentage-calculator/" class="hover:text-white transition-colors text-zinc-300">CGPA to Percentage Calculator</a></li>
+                        <li><a href="/age-calculator/" class="hover:text-white transition-colors text-zinc-300">Age Calculator</a></li>
+                        <li><a href="/easy-grade-calculator/" class="hover:text-white transition-colors text-zinc-300">Easy Grade Calculator</a></li>
+                        <li><a href="/percentile-predictor/" class="hover:text-white transition-colors text-zinc-300">JEE Percentile Predictor</a></li>
+                        <li><a href="/pomodoro-timer/" class="hover:text-white transition-colors text-zinc-300">Pomodoro Timer</a></li>
+                        <li><a href="/word-counter-online/" class="hover:text-white transition-colors text-zinc-300">Word Counter Online</a></li>
+            <li><a href="/75-percent-attendance-calculator/" class="hover:text-white transition-colors text-zinc-300">75% Attendance Calculator</a></li>
+            <li><a href="/cgpa-to-percentage-calculator/" class="hover:text-white transition-colors text-zinc-300">CGPA to Percentage</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="text-lg font-semibold text-white mb-3">Quick Links</div>
+          <ul class="space-y-2 text-sm">
+            <li><a href="/about/" class="hover:text-white transition-colors text-zinc-300">About</a></li>
+            <li><a href="/blog/" class="hover:text-white transition-colors text-zinc-300">Blog</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="text-lg font-semibold text-white mb-3">Company</div>
+          <ul class="space-y-2 text-sm">
+            <li><a href="/contact/" class="hover:text-white transition-colors text-zinc-300">Contact</a></li>
+            <li><a href="/privacy-policy/" class="hover:text-white transition-colors text-zinc-300">Privacy Policy</a></li>
+            <li><a href="/terms-of-use/" class="hover:text-white transition-colors text-zinc-300">Terms of Use</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-zinc-800 pt-6 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-zinc-300">
+        <span>© 2026 <span class="text-white">StudentCalc</span>. All rights reserved.</span>
+        <span>Made with ❤️ in Earth</span>
+      </div>
+    </div>
+    <div class="relative leading-none">
+      <svg viewBox="0 0 1600 300" class="w-full h-auto block">
+        <text x="50%" y="60%" text-anchor="middle" dominant-baseline="middle" fill="white" font-size="230" font-weight="900" letter-spacing="-6" font-family="Arial, sans-serif">StudentCalc</text>
+      </svg>
+    </div>
+  </footer>
+
+  <script>
+    let currentMultiplier = 9.5;
+    let currentMultiplierName = 'CBSE';
+
+    function setMultiplier(multiplier, name) {
+      currentMultiplier = multiplier;
+      currentMultiplierName = name;
+      
+      // Update button styles
+      document.querySelectorAll('.multiplier-btn').forEach(btn => {
+        btn.classList.remove('border-green-500', 'bg-green-50');
+        btn.classList.add('border-zinc-200', 'bg-white');
+      });
+      
+      if (name === 'CBSE') {
+        document.getElementById('btn-cbse').classList.remove('border-zinc-200', 'bg-white');
+        document.getElementById('btn-cbse').classList.add('border-green-500', 'bg-green-50');
+      } else if (name === 'Mumbai University') {
+        document.getElementById('btn-mumbai').classList.remove('border-zinc-200', 'bg-white');
+        document.getElementById('btn-mumbai').classList.add('border-green-500', 'bg-green-50');
+      } else {
+        document.getElementById('btn-standard').classList.remove('border-zinc-200', 'bg-white');
+        document.getElementById('btn-standard').classList.add('border-green-500', 'bg-green-50');
+      }
+      
+      document.getElementById('multiplier-note').innerHTML = `Currently using: <strong class="text-green-600">${currentMultiplierName} Formula (×${currentMultiplier})</strong>`;
+      
+      // Auto-recalculate if there's already a value
+      const cgpaInput = document.getElementById('cgpa');
+      if (cgpaInput.value && cgpaInput.value !== '') {
+        calculatePercentage();
+      }
+    }
+
+    function calculatePercentage() {
+      const cgpa = parseFloat(document.getElementById('cgpa').value);
+      const resultEl = document.getElementById('result');
+
+      if (isNaN(cgpa) || cgpa < 0 || cgpa > 10) {
+        document.getElementById('result-percent').textContent = '—';
+        document.getElementById('result-percent').className = 'text-6xl sm:text-7xl font-bold tracking-tight text-red-500 count-up';
+        document.getElementById('result-sub').textContent = 'Please enter a valid CGPA between 0 and 10.';
+        document.getElementById('result-cgpa').textContent = '—';
+        document.getElementById('result-grade').textContent = '—';
+        document.getElementById('result-status').textContent = '—';
+        document.getElementById('result-formula').textContent = '—';
+        document.getElementById('result-bar').style.width = '0%';
+        document.getElementById('result-bar').className = 'h-full rounded-full bg-red-400';
+        document.getElementById('result-tip').className = '';
+        document.getElementById('result-tip').textContent = '';
+        showResult(resultEl);
+        return;
+      }
+
+      const percentage = cgpa * currentMultiplier;
+      let grade, gradeColor, barColor, statusText;
+
+      if (percentage >= 90) { grade = 'A+'; gradeColor = 'text-green-600'; barColor = 'bg-green-500'; statusText = '✅ Excellent'; }
+      else if (percentage >= 80) { grade = 'A'; gradeColor = 'text-green-600'; barColor = 'bg-green-400'; statusText = '✅ Very Good'; }
+      else if (percentage >= 70) { grade = 'B+'; gradeColor = 'text-blue-600'; barColor = 'bg-blue-400'; statusText = '✅ Good'; }
+      else if (percentage >= 60) { grade = 'B'; gradeColor = 'text-blue-600'; barColor = 'bg-blue-400'; statusText = '✅ Average'; }
+      else if (percentage >= 50) { grade = 'C'; gradeColor = 'text-yellow-600'; barColor = 'bg-yellow-400'; statusText = '⚠️ Needs Improvement'; }
+      else if (percentage >= 40) { grade = 'D'; gradeColor = 'text-orange-600'; barColor = 'bg-orange-400'; statusText = '⚠️ Below Average'; }
+      else { grade = 'F'; gradeColor = 'text-red-600'; barColor = 'bg-red-400'; statusText = '❌ Failed'; }
+
+      const isPassing = percentage >= 40;
+
+      document.getElementById('result-percent').textContent = percentage.toFixed(2) + '%';
+      document.getElementById('result-percent').className = `text-6xl sm:text-7xl font-bold tracking-tight count-up ${isPassing ? 'text-zinc-900' : 'text-red-500'}`;
+      document.getElementById('result-sub').textContent = `${cgpa} CGPA converted using ${currentMultiplierName} formula`;
+      document.getElementById('result-cgpa').textContent = cgpa;
+      document.getElementById('result-grade').textContent = grade;
+      document.getElementById('result-grade').className = `text-sm font-bold ${gradeColor}`;
+      document.getElementById('result-status').innerHTML = statusText;
+      document.getElementById('result-status').className = `text-sm font-bold ${isPassing ? 'text-green-600' : 'text-red-600'}`;
+      document.getElementById('result-formula').textContent = `${cgpa} × ${currentMultiplier} = ${percentage.toFixed(2)}%`;
+
+      const bar = document.getElementById('result-bar');
+      bar.className = `h-full rounded-full bar-grow ${barColor}`;
+      bar.style.width = Math.min(percentage, 100) + '%';
+
+      const tip = document.getElementById('result-tip');
+      if (isPassing && percentage >= 80) {
+        tip.className = 'rounded-xl px-4 py-3 text-sm font-medium bg-green-50 border-2 border-green-200 text-green-800';
+        tip.textContent = `🎉 Outstanding! Your ${percentage.toFixed(2)}% is in the ${grade} range. Keep up the great work!`;
+      } else if (isPassing) {
+        tip.className = 'rounded-xl px-4 py-3 text-sm font-medium bg-green-50 border-2 border-green-200 text-green-800';
+        tip.textContent = `✨ Great! You have ${percentage.toFixed(2)}% (${grade} grade). You're on the right track.`;
+      } else {
+        const neededCgpa = (40 / currentMultiplier).toFixed(2);
+        tip.className = 'rounded-xl px-4 py-3 text-sm font-medium bg-red-50 border-2 border-red-200 text-red-800';
+        tip.textContent = `You need ${neededCgpa} CGPA to reach 40% (minimum passing). Keep working hard!`;
+      }
+
+      showResult(resultEl);
+      if (window.innerWidth < 768) resultEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+
+    function showResult(el) {
+      el.classList.remove('hidden', 'hidden-anim');
+      el.classList.add('fade-up');
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      document.getElementById('btn-cbse').classList.remove('border-zinc-200', 'bg-white');
+      document.getElementById('btn-cbse').classList.add('border-green-500', 'bg-green-50');
+      
+      document.querySelectorAll('#cgpa').forEach(inp => {
+        inp.addEventListener('keypress', e => { if (e.key === 'Enter') calculatePercentage(); });
+      });
+    });
+  </script>
+
+</body>
+
+</html>

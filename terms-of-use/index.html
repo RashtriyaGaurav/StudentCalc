@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms of Use | StudentCalc</title>
+  <meta name="description" content="Read StudentCalc's Terms of Use. By using our free academic tools you agree to these terms — learn about permitted use, accuracy, intellectual property, and your rights." />
+  <link rel="canonical" href="https://www.studentcalc.online/terms-of-use/" />
+
+    <link rel="shortcut icon" href="/images/logo.png" type="image/x-icon">
+
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Terms of Use | StudentCalc",
+    "description": "Terms of Use for StudentCalc.online — free academic tools for students.",
+    "url": "https://studentcalc.online/terms-of-use/",
+    "publisher": {
+      "@type": "Organization",
+      "name": "StudentCalc",
+      "url": "https://studentcalc.online"
+    }
+  }
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+    body { font-family: 'Space Grotesk'; }
+  </style>
+</head>
+
+<body class="bg-white">
+
+   <!-- Header -->
+    <header class="bg-[#FEFEFF] fixed w-full z-50 border-b border-zinc-100">
+        <nav class="flex justify-between items-center max-w-7xl mx-auto px-4 sm:px-6 py-2">
+            <a href="/" class="text-xl sm:text-2xl font-bold tracking-tight">
+                <span class="text-zinc-900">Student</span><span class="text-zinc-900">Calc</span>
+            </a>
+
+            <div class="flex items-center gap-2 sm:gap-8">
+                <a href="/about/"
+                    class="text-sm font-medium hover:scale-105 transition-transform py-2 px-1 hidden sm:block">About</a>
+                <a href="/blog/"
+                    class="text-sm font-medium hover:scale-105 transition-transform py-2 px-1 hidden sm:block">Blog</a>
+                <a href="/materials/"
+                    class="text-sm font-medium hover:scale-105 transition-transform py-2 px-1 hidden sm:block">Materials</a>
+                <a href="/contact/"
+                    class="text-sm font-medium hover:scale-105 transition-transform py-2 px-1 hidden sm:block">Contact</a>
+                <!-- Header Support Button -->
+                <a href="https://rashtriya.gumroad.com/coffee" target="_blank"
+                    class="hidden md:flex items-center gap-2 bg-black text-white px-3 py-2 rounded-full font-semibold hover:bg-gray-900 hover:scale-105 transition-all duration-300">
+
+                    ☕ Support Us
+                </a>
+
+                <!-- Hamburger (mobile only) -->
+                <button id="menuBtn" class="sm:hidden p-2 rounded-lg border border-zinc-200 hover:bg-zinc-50 transition"
+                    aria-label="Open menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor" stroke-width="1.5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Overlay -->
+    <div id="overlay" class="fixed inset-0 bg-black/35 z-[200] hidden opacity-0 transition-opacity duration-250"></div>
+
+    <!-- Sidebar -->
+    <aside id="sidebar"
+        class="fixed top-0 right-0 h-full w-60 bg-white z-[201] border-l border-zinc-100 flex flex-col p-5 translate-x-full transition-transform duration-300 ease-in-out"
+        role="dialog" aria-modal="true" aria-label="Navigation menu">
+        <div class="flex justify-between items-center mb-8">
+            <a href="/" class="text-lg font-bold tracking-tight text-zinc-900">StudentCalc</a>
+            <button id="closeBtn" class="p-1.5 rounded-lg border border-zinc-200 hover:bg-zinc-50 transition"
+                aria-label="Close menu">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor" stroke-width="1.5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+        <nav class="flex flex-col gap-1 flex-1">
+            <a href="/about/"
+                class="text-sm font-medium px-3 py-3 rounded-lg hover:bg-zinc-50 transition-colors">About</a>
+            <a href="/blog/"
+                class="text-sm font-medium px-3 py-3 rounded-lg hover:bg-zinc-50 transition-colors">Blog</a>
+            <a href="/materials/"
+                class="text-sm font-medium px-3 py-3 rounded-lg hover:bg-zinc-50 transition-colors">Materials</a>
+            <a href="/contact/" class="text-sm font-medium px-3 py-3 rounded-lg hover:bg-zinc-50 transition-colors">
+                Contact
+            </a>
+        </nav>
+        <a href="https://rashtriya.gumroad.com/coffee"
+            class="mt-auto text-sm font-medium text-center bg-black text-white py-2.5 px-5 rounded-full hover:opacity-80 transition-opacity">
+            ☕ Support Us
+
+        </a>
+    </aside>
+
+    <script>
+        const menuBtn = document.getElementById('menuBtn');
+        const closeBtn = document.getElementById('closeBtn');
+        const sidebar = document.getElementById('sidebar');
+        const overlay = document.getElementById('overlay');
+
+        function openMenu() {
+            sidebar.classList.remove('translate-x-full');
+            overlay.classList.remove('hidden');
+            requestAnimationFrame(() => overlay.classList.remove('opacity-0'));
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeMenu() {
+            sidebar.classList.add('translate-x-full');
+            overlay.classList.add('opacity-0');
+            setTimeout(() => overlay.classList.add('hidden'), 250);
+            document.body.style.overflow = '';
+        }
+
+        menuBtn.addEventListener('click', openMenu);
+        closeBtn.addEventListener('click', closeMenu);
+        overlay.addEventListener('click', closeMenu);
+        document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMenu(); });
+    </script>
+
+  <main class="mx-auto min-h-[100vh] max-w-5xl px-4 sm:px-6 pt-32 pb-20">
+
+    <!-- Hero -->
+    <div class="text-center mb-14">
+      <span class="px-4 py-1 border border-teal-400 bg-teal-100/50 rounded-full text-sm text-teal-700">Legal</span>
+      <h1 class="text-4xl sm:text-6xl font-semibold mt-5 tracking-tight">Terms of Use</h1>
+      <p class="text-zinc-500 mt-4 text-lg max-w-xl mx-auto leading-relaxed">Simple, fair terms for using StudentCalc — free academic tools built for students.</p>
+      <p class="text-zinc-400 text-sm mt-3">Last updated: May 25, 2026</p>
+    </div>
+
+    <!-- Quick summary badges -->
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-10">
+      <div class="border-2 border-zinc-200 rounded-xl p-4 text-center">
+        <div class="text-2xl mb-1">🆓</div>
+        <p class="text-xs font-medium text-zinc-700">Free for students</p>
+      </div>
+      <div class="border-2 border-zinc-200 rounded-xl p-4 text-center">
+        <div class="text-2xl mb-1">🚫</div>
+        <p class="text-xs font-medium text-zinc-700">No commercial use</p>
+      </div>
+      <div class="border-2 border-zinc-200 rounded-xl p-4 text-center">
+        <div class="text-2xl mb-1">©️</div>
+        <p class="text-xs font-medium text-zinc-700">All rights reserved</p>
+      </div>
+      <div class="border-2 border-zinc-200 rounded-xl p-4 text-center">
+        <div class="text-2xl mb-1">📩</div>
+        <p class="text-xs font-medium text-zinc-700">7-day response</p>
+      </div>
+    </div>
+
+    <!-- Sections -->
+    <div class="space-y-4">
+
+      <section class="border-2 border-zinc-200 rounded-xl p-6 sm:p-8">
+        <h2 class="text-xl font-semibold text-zinc-900 mb-3">1. Acceptance of terms</h2>
+        <p class="text-zinc-600 leading-relaxed">By accessing and using <strong>StudentCalc.online</strong>, you agree to be bound by these Terms of Use and all applicable laws and regulations. If you do not agree with any part of these terms, please do not use our website. Your continued use of the site constitutes your acceptance of these terms.</p>
+      </section>
+
+      <section class="border-2 border-zinc-200 rounded-xl p-6 sm:p-8">
+        <h2 class="text-xl font-semibold text-zinc-900 mb-3">2. Permitted use of our tools</h2>
+        <p class="text-zinc-600 leading-relaxed mb-4">All tools on StudentCalc.online are free to use for personal and educational purposes. By using this site, you agree that you will not:</p>
+        <ul class="space-y-2 text-zinc-600">
+          <li class="flex items-start gap-2"><span class="text-zinc-400 mt-0.5">→</span>Copy, reproduce, redistribute, or resell any part of this website or its tools without prior written permission.</li>
+          <li class="flex items-start gap-2"><span class="text-zinc-400 mt-0.5">→</span>Use the site for any commercial purpose without explicit written consent from StudentCalc.</li>
+          <li class="flex items-start gap-2"><span class="text-zinc-400 mt-0.5">→</span>Attempt to reverse-engineer, scrape, or exploit the website's code, tools, or content.</li>
+          <li class="flex items-start gap-2"><span class="text-zinc-400 mt-0.5">→</span>Use automated bots or scripts to access or interact with the website.</li>
+        </ul>
+        <div class="mt-5 bg-teal-50 border border-teal-200 rounded-lg px-4 py-3">
+          <p class="text-sm text-teal-800 font-medium">✅ Personal and educational use is always 100% free — no account or payment ever required.</p>
+        </div>
+      </section>
+
+      <section class="border-2 border-zinc-200 rounded-xl p-6 sm:p-8">
+        <h2 class="text-xl font-semibold text-zinc-900 mb-3">3. Accuracy of results</h2>
+        <p class="text-zinc-600 leading-relaxed">While we strive for accuracy in all our calculators and tools, StudentCalc.online does not guarantee that results are 100% error-free at all times. All results are provided for informational and educational purposes only.</p>
+        <div class="mt-4 bg-zinc-50 border border-zinc-200 rounded-lg px-4 py-3">
+          <p class="text-sm text-zinc-700 font-medium">⚠️ Always verify important academic data — such as attendance percentages or grades — directly with your institution before making decisions based on our results.</p>
+        </div>
+      </section>
+
+      <section class="border-2 border-zinc-200 rounded-xl p-6 sm:p-8">
+        <h2 class="text-xl font-semibold text-zinc-900 mb-3">4. Intellectual property</h2>
+        <p class="text-zinc-600 leading-relaxed">All content on StudentCalc.online — including but not limited to text, design, code, logos, tool interfaces, and blog posts — is the intellectual property of StudentCalc and its creator. This content is protected by applicable copyright and intellectual property laws.</p>
+        <p class="text-zinc-600 leading-relaxed mt-3">Unauthorised reproduction, distribution, or use of any content from this website without prior written permission is strictly prohibited.</p>
+      </section>
+
+      <section class="border-2 border-zinc-200 rounded-xl p-6 sm:p-8">
+        <h2 class="text-xl font-semibold text-zinc-900 mb-3">5. Third-party links</h2>
+        <p class="text-zinc-600 leading-relaxed">StudentCalc.online may contain links to third-party websites for convenience and reference. These links do not constitute an endorsement of those sites. StudentCalc has no control over the content, policies, or practices of any third-party website and accepts no responsibility for them.</p>
+        <p class="text-zinc-600 leading-relaxed mt-3">We recommend reviewing the privacy policy and terms of any external site you visit through links on our platform.</p>
+      </section>
+
+      <section class="border-2 border-zinc-200 rounded-xl p-6 sm:p-8">
+        <h2 class="text-xl font-semibold text-zinc-900 mb-3">6. Disclaimer & limitation of liability</h2>
+        <p class="text-zinc-600 leading-relaxed">StudentCalc.online is provided on an "as is" and "as available" basis without warranties of any kind, either expressed or implied. StudentCalc and its creator shall not be held liable for:</p>
+        <ul class="space-y-2 text-zinc-600 mt-4">
+          <li class="flex items-start gap-2"><span class="text-zinc-400 mt-0.5">→</span>Any loss, damage, or inconvenience arising from the use of our tools.</li>
+          <li class="flex items-start gap-2"><span class="text-zinc-400 mt-0.5">→</span>Reliance on information or results provided on this website.</li>
+          <li class="flex items-start gap-2"><span class="text-zinc-400 mt-0.5">→</span>Temporary unavailability or downtime of the website.</li>
+          <li class="flex items-start gap-2"><span class="text-zinc-400 mt-0.5">→</span>Any errors, inaccuracies, or omissions in content.</li>
+        </ul>
+      </section>
+
+      <section class="border-2 border-zinc-200 rounded-xl p-6 sm:p-8">
+        <h2 class="text-xl font-semibold text-zinc-900 mb-3">7. User conduct</h2>
+        <p class="text-zinc-600 leading-relaxed mb-4">When using StudentCalc.online, you agree to behave responsibly. You must not:</p>
+        <ul class="space-y-2 text-zinc-600">
+          <li class="flex items-start gap-2"><span class="text-zinc-400 mt-0.5">→</span>Use the site in any way that violates applicable local, national, or international laws or regulations.</li>
+          <li class="flex items-start gap-2"><span class="text-zinc-400 mt-0.5">→</span>Attempt to gain unauthorised access to any part of the website or its server.</li>
+          <li class="flex items-start gap-2"><span class="text-zinc-400 mt-0.5">→</span>Transmit any harmful, offensive, or disruptive content through our contact form or any other channel.</li>
+        </ul>
+      </section>
+
+      <section class="border-2 border-zinc-200 rounded-xl p-6 sm:p-8">
+        <h2 class="text-xl font-semibold text-zinc-900 mb-3">8. Changes to these terms</h2>
+        <p class="text-zinc-600 leading-relaxed">We reserve the right to update or modify these Terms of Use at any time without prior notice. Changes will be reflected with an updated date at the top of this page. Continued use of StudentCalc.online after any changes constitutes your acceptance of the revised terms.</p>
+        <p class="text-zinc-600 leading-relaxed mt-3">We encourage you to review this page periodically to stay informed.</p>
+      </section>
+
+      <section class="border-2 border-zinc-200 rounded-xl p-6 sm:p-8">
+        <h2 class="text-xl font-semibold text-zinc-900 mb-3">9. Governing law</h2>
+        <p class="text-zinc-600 leading-relaxed">These Terms of Use are governed by and construed in accordance with the laws of India. Any disputes arising from the use of this website shall be subject to the exclusive jurisdiction of the courts located in India.</p>
+      </section>
+
+      <!-- FAQ -->
+      <section class="border-2 border-zinc-200 rounded-xl p-6 sm:p-8">
+        <h2 class="text-xl font-semibold text-zinc-900 mb-6">Frequently asked questions</h2>
+        <div class="space-y-6">
+          <div>
+            <h3 class="text-base font-semibold text-zinc-900 mb-1">Can I use StudentCalc tools in my school project?</h3>
+            <p class="text-zinc-600 text-sm leading-relaxed">Yes, absolutely. All tools are free for personal and educational use. Feel free to use them for school, college, or any academic purpose.</p>
+          </div>
+          <div class="border-t border-zinc-100 pt-6">
+            <h3 class="text-base font-semibold text-zinc-900 mb-1">Can I embed or share a tool on my website?</h3>
+            <p class="text-zinc-600 text-sm leading-relaxed">Sharing links to StudentCalc is always welcome. However, copying or embedding our tools on another website without written permission is not allowed.</p>
+          </div>
+          <div class="border-t border-zinc-100 pt-6">
+            <h3 class="text-base font-semibold text-zinc-900 mb-1">What happens if a tool gives me a wrong result?</h3>
+            <p class="text-zinc-600 text-sm leading-relaxed">Our tools are designed to be accurate but should be used for reference only. Always verify critical academic data with your institution. If you spot a bug, please <a href="/contact/" class="text-zinc-900 underline underline-offset-2 hover:opacity-60 transition-opacity">let us know</a>.</p>
+          </div>
+          <div class="border-t border-zinc-100 pt-6">
+            <h3 class="text-base font-semibold text-zinc-900 mb-1">How do I report a violation of these terms?</h3>
+            <p class="text-zinc-600 text-sm leading-relaxed">If you believe someone is misusing StudentCalc's content or tools, please contact us through our <a href="/contact/" class="text-zinc-900 underline underline-offset-2 hover:opacity-60 transition-opacity">contact page</a> and we'll look into it promptly.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact CTA -->
+      <section class="border-2 border-zinc-200 rounded-xl p-6 sm:p-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+        <div>
+          <h2 class="text-xl font-semibold text-zinc-900 mb-1">Have questions about these terms?</h2>
+          <p class="text-zinc-600 text-sm">We're happy to clarify anything. Reach out and we'll respond within 7 days.</p>
+        </div>
+        <a href="/contact/" class="shrink-0 text-sm font-medium bg-black text-white py-2.5 px-6 rounded-full hover:opacity-80 transition-opacity">
+          Contact us
+        </a>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-black w-full overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 pt-10">
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-8 mb-10">
+        <div class="col-span-2 sm:col-span-1">
+          <div class="text-xl font-bold text-white mb-3">StudentCalc</div>
+          <p class="text-sm leading-relaxed text-zinc-300">Free academic tools built for students, by students.</p>
+        </div>
+        <div>
+          <div class="text-lg font-semibold text-white mb-3">Tools</div>
+          <ul class="space-y-2 text-sm">
+            <li><a href="/75-percent-attendance-calculator/" class="hover:text-white transition-colors text-zinc-300">75% Attendance Calculator</a></li>
+            <li><a href="/marks-percentage-calculator/" class="hover:text-white transition-colors text-zinc-300">Marks Percentage Calculator</a></li>
+                        <li><a href="/cgpa-to-percentage-calculator/" class="hover:text-white transition-colors text-zinc-300">CGPA to Percentage Calculator</a></li>
+                        <li><a href="/age-calculator/" class="hover:text-white transition-colors text-zinc-300">Age Calculator</a></li>
+                        <li><a href="/easy-grade-calculator/" class="hover:text-white transition-colors text-zinc-300">Easy Grade Calculator</a></li>
+                        <li><a href="/percentile-predictor/" class="hover:text-white transition-colors text-zinc-300">JEE Percentile Predictor</a></li>
+                        <li><a href="/pomodoro-timer/" class="hover:text-white transition-colors text-zinc-300">Pomodoro Timer</a></li>
+                        <li><a href="/word-counter-online/" class="hover:text-white transition-colors text-zinc-300">Word Counter Online</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="text-lg font-semibold text-white mb-3">Quick Links</div>
+          <ul class="space-y-2 text-sm">
+            <li><a href="/about/" class="hover:text-white transition-colors text-zinc-300">About</a></li>
+            <li><a href="/blog/" class="hover:text-white transition-colors text-zinc-300">Blog</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="text-lg font-semibold text-white mb-3">Company</div>
+          <ul class="space-y-2 text-sm">
+            <li><a href="/contact/" class="hover:text-white transition-colors text-zinc-300">Contact</a></li>
+            <li><a href="/privacy-policy/" class="hover:text-white transition-colors text-zinc-300">Privacy Policy</a></li>
+            <li><a href="/terms-of-use/" class="hover:text-white transition-colors text-zinc-300">Terms of Use</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-zinc-800 pt-6 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-zinc-300">
+        <span>© 2026 <span class="text-white">StudentCalc</span>. All rights reserved.</span>
+        <span>Made with ❤️ in Earth</span>
+      </div>
+    </div>
+    <div class="relative leading-none">
+      <svg viewBox="0 0 1600 300" class="w-full h-auto block">
+        <text x="50%" y="60%" text-anchor="middle" dominant-baseline="middle" fill="white" font-size="230" font-weight="900" letter-spacing="-6" font-family="Arial, sans-serif">StudentCalc</text>
+      </svg>
+    </div>
+  </footer>
+
+</body>
+</html>
